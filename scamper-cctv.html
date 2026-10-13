@@ -1,0 +1,3548 @@
+<!DOCTYPE html>
+<!-- Created by Balaji | SCAMPER on CCTV: Smart Campus Camera -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="author" content="Balaji">
+  <meta name="copyright" content="© 2026 Balaji. All rights reserved.">
+  <meta name="description" content="SCAMPER on CCTV: Smart Campus Camera - A colorful animated journey reimagining campus surveillance using the SCAMPER method. Created by Balaji.">
+  <title>SCAMPER on CCTV: Smart Campus Camera | By Balaji</title>
+
+  <!-- Google Fonts: Fredoka & Outfit for playful cartoon aesthetics -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+
+  <style>
+/* ==========================================================================
+   SCAMPER on CCTV: Smart Campus Camera
+   Created by Balaji | © 2026 Balaji. All rights reserved.
+   ========================================================================== */
+
+:root {
+  /* SCAMPER Vibrant Color Palette */
+  --color-s: #FF4757; /* Substitute - Red */
+  --color-c: #FF7F50; /* Combine - Orange */
+  --color-a: #FFA502; /* Adapt - Yellow / Amber */
+  --color-m: #2ED573; /* Modify - Emerald Green */
+  --color-p: #1E90FF; /* Put to another use - Blue */
+  --color-e: #8854D0; /* Eliminate - Purple */
+  --color-r: #ED4C67; /* Reverse - Hot Pink */
+
+  /* Surface & Base Colors */
+  --bg-dark: #0A0D14;
+  --bg-card: rgba(255, 255, 255, 0.04);
+  --text-main: #FFFFFF;
+  --text-muted: #94A3B8;
+  --border-glass: rgba(255, 255, 255, 0.12);
+
+  /* Fonts */
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Fredoka', cursive, sans-serif;
+
+  /* Header & Nav Heights */
+  --header-height: 60px;
+  --nav-height: 52px;
+  
+  /* Transitions */
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --------------------------------------------------------------------------
+   RESET & GLOBAL STYLES
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-body);
+  min-height: 100dvh;
+  overflow-x: hidden;
+  line-height: 1.5;
+  background-color: var(--bg-dark);
+}
+
+/* --------------------------------------------------------------------------
+   SITE HEADER (Author: Balaji clearly visible)
+   -------------------------------------------------------------------------- */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  background: rgba(10, 13, 20, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border-glass);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.header-inner {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.brand-camera-icon {
+  display: flex;
+  align-items: center;
+  animation: gentleBob 3s ease-in-out infinite;
+}
+
+.brand-title {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+  background: linear-gradient(90deg, #FF4757, #FFA502, #2ED573, #1E90FF, #ED4C67);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Ownership badge: Balaji */
+.header-author {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.85rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  font-size: 0.88rem;
+  transition: transform 0.25s var(--ease-bounce), background 0.25s;
+  flex-shrink: 0;
+}
+
+.header-author:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.author-label {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.author-name {
+  color: #FFA502;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.header-controls {
+  flex-shrink: 0;
+}
+
+.btn-icon {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-glass);
+  color: var(--text-main);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s var(--ease-bounce), background 0.2s;
+}
+
+.btn-icon:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* --------------------------------------------------------------------------
+   STICKY MINI PROGRESS BAR (S C A M P E R)
+   -------------------------------------------------------------------------- */
+.scamper-nav {
+  position: sticky;
+  top: var(--header-height);
+  width: 100%;
+  height: var(--nav-height);
+  background: rgba(14, 18, 27, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-glass);
+  z-index: 990;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.scamper-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.scamper-nav-track {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0 0.75rem;
+}
+
+.nav-letter {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1.5px solid transparent;
+  transition: all 0.3s var(--ease-bounce);
+  min-height: 36px;
+  white-space: nowrap;
+}
+
+.nav-letter .letter-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: #FFFFFF;
+}
+
+.nav-letter .nav-label {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .nav-letter .nav-label {
+    display: inline-block;
+  }
+}
+
+/* Active & Individual Letter Colors */
+.letter-s .letter-badge { background: var(--color-s); }
+.letter-c .letter-badge { background: var(--color-c); }
+.letter-a .letter-badge { background: var(--color-a); }
+.letter-m .letter-badge { background: var(--color-m); }
+.letter-p .letter-badge { background: var(--color-p); }
+.letter-e .letter-badge { background: var(--color-e); }
+.letter-r .letter-badge { background: var(--color-r); }
+
+.nav-letter:hover {
+  transform: translateY(-2px);
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-letter.active {
+  transform: scale(1.06);
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.nav-letter.letter-s.active { border-color: var(--color-s); box-shadow: 0 0 14px rgba(255, 71, 87, 0.4); }
+.nav-letter.letter-c.active { border-color: var(--color-c); box-shadow: 0 0 14px rgba(255, 127, 80, 0.4); }
+.nav-letter.letter-a.active { border-color: var(--color-a); box-shadow: 0 0 14px rgba(255, 165, 2, 0.4); }
+.nav-letter.letter-m.active { border-color: var(--color-m); box-shadow: 0 0 14px rgba(46, 213, 115, 0.4); }
+.nav-letter.letter-p.active { border-color: var(--color-p); box-shadow: 0 0 14px rgba(30, 144, 255, 0.4); }
+.nav-letter.letter-e.active { border-color: var(--color-e); box-shadow: 0 0 14px rgba(136, 84, 208, 0.4); }
+.nav-letter.letter-r.active { border-color: var(--color-r); box-shadow: 0 0 14px rgba(237, 76, 103, 0.4); }
+
+/* --------------------------------------------------------------------------
+   INTRO SCREEN
+   -------------------------------------------------------------------------- */
+.screen {
+  min-height: calc(100dvh - var(--header-height));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 2.5rem 1rem;
+  overflow: hidden;
+}
+
+.intro-screen {
+  background: radial-gradient(circle at 50% 30%, #1A2338 0%, #0A0D16 80%);
+  text-align: center;
+}
+
+.intro-container {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 820px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro-badge-pill {
+  display: inline-block;
+  padding: 0.35rem 1rem;
+  border-radius: 999px;
+  background: rgba(30, 144, 255, 0.15);
+  border: 1px solid rgba(30, 144, 255, 0.4);
+  color: #70A1FF;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+}
+
+.intro-title {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: clamp(1.85rem, 5.5vw, 4.2rem);
+  line-height: 1.15;
+  margin-bottom: 0.35rem;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, #FFFFFF 30%, #A4B0BE 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: normal;
+}
+
+.intro-tagline {
+  font-size: clamp(1rem, 2.8vw, 1.5rem);
+  color: #FFA502;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+/* 7 Colorful Letters Pop Grid (CSS Grid ensures all 7 fit in 1 row) */
+.letters-pop-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: clamp(4px, 1.2vw, 10px);
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 1.5rem;
+  width: 100%;
+  max-width: 440px;
+}
+
+.pop-char {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: clamp(8px, 2vw, 16px);
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: clamp(1.1rem, 3.2vw, 2.1rem);
+  color: #FFFFFF;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  animation: letterPopIn 0.8s var(--ease-bounce) forwards;
+  animation-delay: var(--delay);
+  opacity: 0;
+  transform: translateY(30px) scale(0.6);
+  cursor: pointer;
+  transition: transform 0.25s var(--ease-bounce), box-shadow 0.25s;
+}
+
+.pop-char:hover {
+  transform: translateY(-8px) scale(1.15) rotate(-4deg);
+}
+
+.char-s { background: linear-gradient(135deg, #FF4757, #FF6B81); }
+.char-c { background: linear-gradient(135deg, #FF7F50, #FFA502); }
+.char-a { background: linear-gradient(135deg, #FFA502, #FFEAA7); color: #1E293B; }
+.char-m { background: linear-gradient(135deg, #2ED573, #7BED9F); }
+.char-p { background: linear-gradient(135deg, #1E90FF, #70A1FF); }
+.char-e { background: linear-gradient(135deg, #8854D0, #A55EEA); }
+.char-r { background: linear-gradient(135deg, #ED4C67, #FF9FF3); }
+
+/* Hero Mascot */
+.hero-mascot-wrap {
+  position: relative;
+  margin-bottom: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-mascot {
+  width: clamp(130px, 22vw, 170px);
+  height: clamp(130px, 22vw, 170px);
+  cursor: pointer;
+}
+
+.mascot-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.mascot-hover-body {
+  animation: mascotBob 3.5s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.mascot-wave-arm {
+  transform-origin: 52px 98px;
+  animation: waveArm 2.2s ease-in-out infinite;
+}
+
+.jet-flame {
+  animation: jetFlicker 0.4s ease-in-out infinite alternate;
+}
+
+.antenna-ball {
+  animation: pulseAntenna 1.8s ease-in-out infinite;
+}
+
+.mascot-speech-bubble {
+  margin-top: 0.4rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-glass);
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #E2E8F0;
+  animation: floatBubble 2.5s ease-in-out infinite;
+}
+
+/* Scroll down button */
+.scroll-down-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.6rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #1E90FF, #70A1FF);
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  box-shadow: 0 10px 25px rgba(30, 144, 255, 0.4);
+  transition: transform 0.25s var(--ease-bounce), box-shadow 0.25s;
+}
+
+.scroll-down-btn:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 14px 30px rgba(30, 144, 255, 0.6);
+}
+
+.chevron-svg {
+  animation: bounceDown 1.8s ease-in-out infinite;
+}
+
+.campus-skyline-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 180px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.skyline-svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   THE 7 SCENE SECTIONS (Scroll-down, one per section)
+   -------------------------------------------------------------------------- */
+.scene-section {
+  min-height: calc(100dvh - var(--header-height) - var(--nav-height));
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem 3rem;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  scroll-margin-top: calc(var(--header-height) + var(--nav-height));
+}
+
+/* Scene Color Themes & Subtle Gradients */
+.scene-s { background: radial-gradient(circle at 50% 20%, #301017 0%, #140508 100%); }
+.scene-c { background: radial-gradient(circle at 50% 20%, #351708 0%, #140702 100%); }
+.scene-a { background: radial-gradient(circle at 50% 20%, #302004 0%, #120A01 100%); }
+.scene-m { background: radial-gradient(circle at 50% 20%, #0A2616 0%, #031008 100%); }
+.scene-p { background: radial-gradient(circle at 50% 20%, #0A1C38 0%, #030C1A 100%); }
+.scene-e { background: radial-gradient(circle at 50% 20%, #230E3D 0%, #0F041B 100%); }
+.scene-r { background: radial-gradient(circle at 50% 20%, #38081C 0%, #16020A 100%); }
+
+/* Tiny Scene Label (Badge + 2-3 word title ONLY. No paragraphs.) */
+.scene-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  z-index: 20;
+}
+
+.scene-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(42px, 5.5vw, 60px);
+  height: clamp(42px, 5.5vw, 60px);
+  border-radius: 16px;
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: #FFFFFF;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.badge-s { background: linear-gradient(135deg, #FF4757, #FF6B81); }
+.badge-c { background: linear-gradient(135deg, #FF7F50, #FFA502); }
+.badge-a { background: linear-gradient(135deg, #FFA502, #FFEAA7); color: #1E293B; }
+.badge-m { background: linear-gradient(135deg, #2ED573, #7BED9F); }
+.badge-p { background: linear-gradient(135deg, #1E90FF, #70A1FF); }
+.badge-e { background: linear-gradient(135deg, #8854D0, #A55EEA); }
+.badge-r { background: linear-gradient(135deg, #ED4C67, #FF9FF3); }
+
+.scene-title {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(1.3rem, 3.2vw, 2.1rem);
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+}
+
+/* Scene Stage: Scalable SVG Container */
+.scene-stage {
+  width: 100%;
+  max-width: 860px;
+  aspect-ratio: 800 / 500;
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), inset 0 0 0 1px var(--border-glass);
+  background: #0B0E17;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scene-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Action Controls */
+.scene-actions {
+  margin-top: 1rem;
+  z-index: 20;
+}
+
+.scene-replay-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-glass);
+  color: var(--text-muted);
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: all 0.25s var(--ease-bounce);
+}
+
+.scene-replay-btn:hover {
+  background: rgba(255, 255, 255, 0.16);
+  color: #FFFFFF;
+  transform: scale(1.05);
+}
+
+/* --------------------------------------------------------------------------
+   INTERACTIVE CHARACTERS & SOUND-FREE MICRO-INTERACTIONS
+   -------------------------------------------------------------------------- */
+.interactive-char {
+  cursor: pointer;
+  transition: transform 0.25s var(--ease-bounce), filter 0.25s;
+  outline: none;
+}
+
+.interactive-char:hover,
+.interactive-char:focus-visible {
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6));
+  transform: scale(1.06);
+}
+
+.interactive-char:active {
+  transform: scale(0.96);
+}
+
+/* Custom sound-free reaction bubble on tap/hover */
+.char-reaction-bubble {
+  position: absolute;
+  background: #FFFFFF;
+  color: #0A0D14;
+  padding: 0.35rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  animation: popUpBubble 1.4s ease-out forwards;
+  z-index: 100;
+}
+
+/* --------------------------------------------------------------------------
+   DETAILED SCENE ANIMATIONS (Pure Transform & Opacity for 60fps)
+   -------------------------------------------------------------------------- */
+
+/* ----- SCENE 1 (S - SUBSTITUTE) ----- */
+.scene-s .guard-head {
+  transform-origin: 315px 330px;
+  transition: transform 0.6s var(--ease-bounce);
+}
+
+/* Sleeping State */
+.scene-s.state-sleeping .guard-head {
+  transform: rotate(-14deg) translateY(6px);
+}
+.scene-s.state-sleeping .guard-eyes-awake { opacity: 0; }
+.scene-s.state-sleeping .guard-eyes-sleeping { opacity: 1; }
+.scene-s.state-sleeping .guard-exclamation { opacity: 0; transform: scale(0); }
+.scene-s.state-sleeping .floating-zzz { opacity: 1; }
+.scene-s.state-sleeping .phone-screen-flash { fill: #1E293B; }
+.scene-s.state-sleeping .phone-vibe-left,
+.scene-s.state-sleeping .phone-vibe-right { opacity: 0; }
+
+/* Awake / Alert State */
+.scene-s.state-alert .guard-head {
+  transform: rotate(0deg) translateY(-8px);
+}
+.scene-s.state-alert .guard-eyes-awake { opacity: 1; }
+.scene-s.state-alert .guard-eyes-sleeping { opacity: 0; }
+.scene-s.state-alert .guard-exclamation {
+  opacity: 1;
+  transform: scale(1.1);
+  animation: exclamationBounce 0.5s var(--ease-bounce);
+}
+.scene-s.state-alert .floating-zzz { opacity: 0; }
+.scene-s.state-alert .phone-screen-flash {
+  animation: redFlash 0.5s ease-in-out infinite alternate;
+}
+.scene-s.state-alert .phone-vibe-left,
+.scene-s.state-alert .phone-vibe-right {
+  animation: phoneBuzz 0.2s ease-in-out infinite;
+}
+
+/* CamBot Hover & Beam */
+.scene-s .cambot-float-group {
+  animation: robotHover 3s ease-in-out infinite;
+}
+
+.scene-s .cambot-scan-beam {
+  transform-origin: 560px 260px;
+  animation: sweepBeam 4s ease-in-out infinite;
+}
+
+.scene-s .s-target-box {
+  animation: targetPulse 1.2s ease-in-out infinite;
+}
+
+.scene-s .alert-wifi-beam {
+  stroke-dashoffset: 40;
+  animation: beamFlow 1s linear infinite;
+}
+
+/* Zzz Floating */
+.zzz-1 { animation: floatZzz 2.4s ease-in-out infinite; }
+.zzz-2 { animation: floatZzz 2.4s ease-in-out infinite 0.5s; }
+.zzz-3 { animation: floatZzz 2.4s ease-in-out infinite 1s; }
+
+/* ----- SCENE 2 (C - COMBINE) ----- */
+.scene-c .flame-outer {
+  animation: flameFlicker 0.6s ease-in-out infinite alternate;
+}
+
+.scene-c .flame-inner {
+  animation: flameFlicker 0.4s ease-in-out infinite alternate 0.2s;
+}
+
+.scene-c .siren-beam {
+  transform-origin: 50px -8px;
+  animation: sirenSpin 0.7s linear infinite;
+}
+
+.scene-c .sonic-wave {
+  animation: sonicPulse 1s ease-out infinite;
+}
+
+.scene-c .thermo-mercury-bar {
+  transform-origin: bottom;
+  animation: thermoRise 4s ease-in-out infinite alternate;
+}
+
+.scene-c .tamper-hand-group {
+  transform-origin: 300px 40px;
+  animation: tamperCover 6s ease-in-out infinite;
+}
+
+/* ----- SCENE 3 (A - ADAPT) ----- */
+.scene-a .class-cam-head {
+  transform-origin: 0 24px;
+  animation: camPan 8s ease-in-out infinite;
+}
+
+.scene-a .green-tick-badge {
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.4s var(--ease-bounce);
+}
+
+.scene-a .green-tick-badge.scanned {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.scene-a .face-target {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.scene-a .face-target.scanning {
+  opacity: 1;
+  animation: scanBoxPulse 0.8s ease-in-out infinite;
+}
+
+/* ----- SCENE 4 (M - MODIFY) ----- */
+.scene-m .ring-led {
+  animation: ledStrobe 1.5s ease-in-out infinite alternate;
+}
+
+.scene-m .bright-wide-cone {
+  animation: brightConeBreath 3s ease-in-out infinite alternate;
+}
+
+.scene-m .leo-wave-arm {
+  transform-origin: 58px 78px;
+  animation: waveArm 2s ease-in-out infinite;
+}
+
+.scene-m .bright-sparkle {
+  animation: sparkleTwinkle 1.8s ease-in-out infinite;
+}
+
+/* ----- SCENE 5 (P - PUT TO ANOTHER USE) ----- */
+.scene-p .moving-scan-line {
+  animation: scanLineSweep 2.5s ease-in-out infinite;
+}
+
+.scene-p .scan-plane {
+  animation: planePulse 2.5s ease-in-out infinite;
+}
+
+.scene-p .sonar-ring {
+  transform-origin: 9px 9px;
+  animation: sonarRingPing 1.8s ease-out infinite;
+}
+.scene-p .sonar-ring.r-2 { animation-delay: 0.6s; }
+.scene-p .sonar-ring.r-3 { animation-delay: 1.2s; }
+
+.scene-p .metal-red-box {
+  animation: targetPulse 0.9s ease-in-out infinite;
+}
+
+/* ----- SCENE 6 (E - ELIMINATE) ----- */
+.scene-e .scissors-cut-unit {
+  animation: snipAction 3.5s ease-in-out infinite;
+}
+
+.scene-e .power-cable-group {
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scene-e.cut-done .power-cable-l,
+.scene-e.cut-done .power-cable-r,
+.scene-e.cut-done .power-cable-stripes,
+.scene-e.cut-done .power-label-tag {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.scene-e .poe-dot {
+  animation: dotTravel 2s linear infinite;
+}
+.scene-e .poe-dot.dot-1 { animation-delay: 0.0s; }
+.scene-e .poe-dot.dot-2 { animation-delay: 0.3s; }
+.scene-e .poe-dot.dot-3 { animation-delay: 0.6s; }
+.scene-e .poe-dot.dot-4 { animation-delay: 0.9s; }
+.scene-e .poe-dot.dot-5 { animation-delay: 1.2s; }
+.scene-e .poe-dot.dot-6 { animation-delay: 1.5s; }
+.scene-e .poe-dot.dot-7 { animation-delay: 1.8s; }
+
+/* ----- SCENE 7 (R - REVERSE) ----- */
+.scene-r .propeller {
+  transform-origin: center;
+  animation: propSpin 0.15s linear infinite;
+}
+
+.scene-r .flying-aerocam-unit {
+  /* Drone flies along playground path */
+  animation: droneMission 9s ease-in-out infinite;
+}
+
+.scene-r .drone-down-scan {
+  animation: droneScanFade 9s ease-in-out infinite;
+}
+
+.scene-r .dock-charge-badge {
+  animation: chargeBadgeBlink 9s ease-in-out infinite;
+}
+
+/* --------------------------------------------------------------------------
+   CLOSING SCREEN (OUTRO)
+   -------------------------------------------------------------------------- */
+.outro-screen {
+  background: radial-gradient(circle at 50% 40%, #20102B 0%, #08030C 85%);
+  text-align: center;
+}
+
+.outro-container {
+  width: 100%;
+  max-width: 860px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+}
+
+.outro-badge-pill {
+  display: inline-block;
+  padding: 0.35rem 1.1rem;
+  border-radius: 999px;
+  background: rgba(237, 76, 103, 0.15);
+  border: 1px solid rgba(237, 76, 103, 0.4);
+  color: #FF9FF3;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+}
+
+.outro-title {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: clamp(1.8rem, 4.5vw, 3.4rem);
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #FFFFFF 20%, #FFA502 60%, #ED4C67 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.celebration-cast {
+  width: 100%;
+  max-width: 760px;
+  margin-bottom: 1.75rem;
+}
+
+.celebration-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.scamper-summary-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  padding: 0 0.5rem;
+}
+
+.pill-badge {
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.pill-s { background: var(--color-s); }
+.pill-c { background: var(--color-c); }
+.pill-a { background: var(--color-a); color: #1E293B; }
+.pill-m { background: var(--color-m); }
+.pill-p { background: var(--color-p); }
+.pill-e { background: var(--color-e); }
+.pill-r { background: var(--color-r); }
+
+.replay-journey-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.8rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ED4C67, #FFA502);
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0 10px 25px rgba(237, 76, 103, 0.4);
+  transition: transform 0.25s var(--ease-bounce), box-shadow 0.25s;
+}
+
+.replay-journey-btn:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 16px 32px rgba(237, 76, 103, 0.6);
+}
+
+/* --------------------------------------------------------------------------
+   SITE FOOTER (Ownership: Balaji strictly maintained)
+   -------------------------------------------------------------------------- */
+.site-footer {
+  background: #06080D;
+  border-top: 1px solid var(--border-glass);
+  padding: 2.2rem 1.25rem;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.footer-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.copyright-line {
+  font-size: 0.95rem;
+  color: #E2E8F0;
+  margin-bottom: 0.4rem;
+}
+
+.copyright-line strong {
+  color: #FFA502;
+  font-size: 1rem;
+}
+
+.footer-subtext {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   KEYFRAME ANIMATIONS (Hardware Accelerated: transform & opacity)
+   -------------------------------------------------------------------------- */
+@keyframes letterPopIn {
+  0% { opacity: 0; transform: translateY(30px) scale(0.6); }
+  70% { transform: translateY(-8px) scale(1.1); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes mascotBob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes waveArm {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-25deg); }
+  75% { transform: rotate(15deg); }
+}
+
+@keyframes jetFlicker {
+  0% { transform: scaleY(0.85); opacity: 0.8; }
+  100% { transform: scaleY(1.2); opacity: 1; }
+}
+
+@keyframes pulseAntenna {
+  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 4px #00D2D3); }
+  50% { transform: scale(1.3); filter: drop-shadow(0 0 10px #00D2D3); }
+}
+
+@keyframes floatBubble {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes bounceDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+@keyframes gentleBob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+@keyframes floatZzz {
+  0% { opacity: 0; transform: translate(0, 0) scale(0.6); }
+  50% { opacity: 0.9; }
+  100% { opacity: 0; transform: translate(16px, -24px) scale(1.2); }
+}
+
+@keyframes exclamationBounce {
+  0% { transform: scale(0); opacity: 0; }
+  60% { transform: scale(1.3); opacity: 1; }
+  100% { transform: scale(1.1); opacity: 1; }
+}
+
+@keyframes redFlash {
+  0% { fill: #1E293B; }
+  100% { fill: #FF4757; }
+}
+
+@keyframes phoneBuzz {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(-2px, 1px); }
+  75% { transform: translate(2px, -1px); }
+}
+
+@keyframes robotHover {
+  0%, 100% { transform: translate(530px, 220px); }
+  50% { transform: translate(530px, 208px); }
+}
+
+@keyframes sweepBeam {
+  0%, 100% { opacity: 0.2; transform: rotate(-4deg); }
+  50% { opacity: 0.65; transform: rotate(4deg); }
+}
+
+@keyframes targetPulse {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.08); opacity: 1; }
+}
+
+@keyframes beamFlow {
+  from { stroke-dashoffset: 40; }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes flameFlicker {
+  0% { transform: scaleY(0.9) scaleX(0.95); }
+  100% { transform: scaleY(1.1) scaleX(1.05); }
+}
+
+@keyframes sirenSpin {
+  0% { opacity: 0.3; transform: scaleX(0.7); }
+  50% { opacity: 1; transform: scaleX(1.2); }
+  100% { opacity: 0.3; transform: scaleX(0.7); }
+}
+
+@keyframes sonicPulse {
+  0% { transform: scale(0.8); opacity: 0.8; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+@keyframes thermoRise {
+  0%, 20% { height: 10px; y: 98px; }
+  50%, 80% { height: 70px; y: 38px; }
+  100% { height: 10px; y: 98px; }
+}
+
+@keyframes tamperCover {
+  0%, 40% { transform: translate(-80px, -60px); opacity: 0; }
+  50%, 75% { transform: translate(0, 0); opacity: 1; }
+  85%, 100% { transform: translate(-80px, -60px); opacity: 0; }
+}
+
+@keyframes camPan {
+  0%, 100% { transform: rotate(-18deg); }
+  50% { transform: rotate(18deg); }
+}
+
+@keyframes scanBoxPulse {
+  0%, 100% { opacity: 0.6; transform: scale(0.98); }
+  50% { opacity: 1; transform: scale(1.04); }
+}
+
+@keyframes ledStrobe {
+  0% { filter: drop-shadow(0 0 3px #FFFFFF); }
+  100% { filter: drop-shadow(0 0 12px #2ED573); }
+}
+
+@keyframes brightConeBreath {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 0.95; }
+}
+
+@keyframes sparkleTwinkle {
+  0%, 100% { transform: scale(0.8) rotate(0deg); opacity: 0.6; }
+  50% { transform: scale(1.2) rotate(45deg); opacity: 1; }
+}
+
+@keyframes scanLineSweep {
+  0% { transform: translateY(-70px); opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { transform: translateY(70px); opacity: 0; }
+}
+
+@keyframes planePulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes sonarRingPing {
+  0% { r: 6; opacity: 1; }
+  100% { r: 38; opacity: 0; }
+}
+
+@keyframes snipAction {
+  0%, 25% { transform: translate(300px, 145px) rotate(0deg); }
+  35% { transform: translate(300px, 145px) rotate(-15deg); }
+  45% { transform: translate(300px, 145px) rotate(15deg); }
+  55%, 100% { transform: translate(300px, 145px) scale(0); opacity: 0; }
+}
+
+@keyframes dotTravel {
+  0% { transform: translate(-10px, -5px); opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { transform: translate(25px, 12px); opacity: 0; }
+}
+
+@keyframes propSpin {
+  0% { transform: scaleX(1); }
+  50% { transform: scaleX(0.2); }
+  100% { transform: scaleX(1); }
+}
+
+@keyframes droneMission {
+  /* Docked at start */
+  0%, 15% { transform: translate(130px, 135px) scale(0.9); }
+  /* Flying out to Sam */
+  35% { transform: translate(320px, 90px) scale(1.05) rotate(8deg); }
+  /* Hovering & Scanning Sam */
+  45%, 65% { transform: translate(520px, 210px) scale(1.1) rotate(0deg); }
+  /* Flying back */
+  85% { transform: translate(240px, 80px) scale(1.02) rotate(-8deg); }
+  /* Docked & Charging */
+  95%, 100% { transform: translate(130px, 135px) scale(0.9); }
+}
+
+@keyframes droneScanFade {
+  0%, 42% { opacity: 0; }
+  45%, 65% { opacity: 1; }
+  68%, 100% { opacity: 0; }
+}
+
+@keyframes chargeBadgeBlink {
+  0%, 15% { opacity: 1; transform: scale(1); }
+  16%, 90% { opacity: 0; transform: scale(0.8); }
+  95%, 100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes popUpBubble {
+  0% { opacity: 0; transform: translateY(0) scale(0.7); }
+  20% { opacity: 1; transform: translateY(-16px) scale(1.1); }
+  80% { opacity: 1; transform: translateY(-24px) scale(1); }
+  100% { opacity: 0; transform: translateY(-34px) scale(0.9); }
+}
+
+/* --------------------------------------------------------------------------
+   REDUCED MOTION SUPPORT
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .flying-aerocam-unit {
+    transform: translate(350px, 180px) !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVENESS (360px, 768px, 1440px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  :root {
+    --header-height: 52px;
+    --nav-height: 44px;
+  }
+
+  .header-inner {
+    padding: 0 0.5rem;
+    gap: 0.35rem;
+  }
+
+  .header-brand .brand-title {
+    display: none; /* Keep clean camera icon + author badge on mobile */
+  }
+
+  .header-author {
+    padding: 0.25rem 0.65rem;
+    font-size: 0.82rem;
+  }
+
+  .scamper-nav-track {
+    gap: 0.2rem;
+    padding: 0 0.4rem;
+  }
+
+  .nav-letter {
+    padding: 0.2rem 0.45rem;
+    min-height: 32px;
+  }
+
+  .nav-letter .letter-badge {
+    width: 22px;
+    height: 22px;
+    font-size: 0.78rem;
+  }
+
+  /* 7 SCAMPER letters on a single row */
+  .letters-pop-grid {
+    gap: 4px;
+    max-width: 300px;
+  }
+
+  .pop-char {
+    font-size: 1.15rem;
+    border-radius: 8px;
+  }
+
+  .scene-section {
+    padding: 1.25rem 0.5rem 1.75rem;
+  }
+
+  .scene-stage {
+    border-radius: 12px;
+  }
+
+  .scene-header {
+    gap: 0.55rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .scene-badge {
+    width: 38px;
+    height: 38px;
+    font-size: 1.4rem;
+    border-radius: 12px;
+  }
+
+  .scene-title {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .scene-stage {
+    max-width: 940px;
+  }
+
+  .intro-title {
+    font-size: 4.4rem;
+  }
+}
+
+/* Extras layer - Created by Balaji | (c) 2026 Balaji. All rights reserved. */
+.rb-progress{position:fixed;top:0;left:0;right:0;height:4px;z-index:300;transform-origin:left center;transform:scaleX(0);background:linear-gradient(90deg,#FF4757,#FF9F43,#FECA57,#2ED573,#1E90FF,#A55EEA,#FF6EB4);pointer-events:none;will-change:transform}
+/* ambient floating campus bits */
+.ambient{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:1}
+.ambient span{position:absolute;left:var(--x);bottom:-8%;font-size:var(--s);opacity:0;animation:ambFloat var(--d) linear var(--delay) infinite;will-change:transform,opacity}
+@keyframes ambFloat{0%{transform:translate3d(0,0,0) rotate(0);opacity:0}12%{opacity:.75}85%{opacity:.6}100%{transform:translate3d(var(--dx),-115vh,0) rotate(var(--r));opacity:0}}
+.scene-section:not(.in-view) .ambient span{animation-play-state:paused}
+.paused-animations .ambient span{animation-play-state:paused}
+/* story ribbon */
+.story-ribbon{display:flex;align-items:center;justify-content:center;gap:.35rem;margin-top:.9rem;z-index:20;flex-wrap:nowrap}
+.story-step{width:clamp(46px,9vw,62px);height:clamp(46px,9vw,62px);display:flex;align-items:center;justify-content:center;font-size:clamp(1.4rem,4.4vw,1.9rem);border-radius:16px;background:rgba(255,255,255,.07);border:2px solid rgba(255,255,255,.14);cursor:pointer;transition:transform .35s cubic-bezier(.3,1.6,.5,1),background .3s,border-color .3s,box-shadow .3s;-webkit-tap-highlight-color:transparent;user-select:none}
+.story-step.on{transform:scale(1.22) translateY(-4px);background:var(--c);border-color:#fff;box-shadow:0 10px 24px -6px var(--c)}
+.story-arrow{color:rgba(255,255,255,.4);font-size:1.2rem;font-weight:800}
+/* signature on every stage */
+.stage-mark{position:absolute;right:10px;bottom:8px;z-index:30;pointer-events:none;font-family:var(--font-heading,sans-serif);font-weight:800;font-size:clamp(.7rem,1.6vw,.95rem);color:#fff;opacity:.8;text-shadow:0 1px 4px rgba(0,0,0,.8);background:rgba(0,0,0,.35);padding:.15rem .55rem;border-radius:999px}
+.scene-stage{transition:transform .18s ease-out;will-change:transform}
+/* tap ripple + confetti */
+.tap-ripple{position:fixed;width:20px;height:20px;margin:-10px 0 0 -10px;border-radius:50%;border:3px solid var(--c,#fff);pointer-events:none;z-index:400;animation:rip .6s ease-out forwards}
+@keyframes rip{to{transform:scale(5);opacity:0}}
+.cf{position:fixed;left:0;top:0;pointer-events:none;z-index:500;will-change:transform,opacity;line-height:1}
+/* buddy mascot */
+.cam-buddy{position:fixed;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:250;width:62px;height:62px;border:0;background:none;padding:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.cam-buddy svg{width:100%;height:100%;animation:bob 2.4s ease-in-out infinite;filter:drop-shadow(0 6px 8px rgba(0,0,0,.45))}
+.cam-buddy.jump svg{animation:jump .6s ease-out}
+@keyframes bob{50%{transform:translateY(-6px)}}
+@keyframes jump{30%{transform:translateY(-22px) rotate(-8deg)}60%{transform:translateY(0) rotate(6deg)}}
+.buddy-bubble{position:absolute;right:46px;top:-34px;min-width:40px;text-align:center;font-size:1.35rem;background:#fff;border-radius:16px 16px 4px 16px;padding:.15rem .5rem;box-shadow:0 6px 14px rgba(0,0,0,.4);transition:transform .35s cubic-bezier(.3,1.7,.5,1)}
+.buddy-bubble.pop{animation:bpop .5s cubic-bezier(.3,1.7,.5,1)}
+@keyframes bpop{0%{transform:scale(.3)}100%{transform:scale(1)}}
+/* sound button */
+#soundToggle{font-size:1.05rem}
+/* quiz */
+.quiz-section{position:relative;padding:3rem 1rem 3.5rem;display:flex;flex-direction:column;align-items:center;gap:1.1rem;background:radial-gradient(circle at 50% 10%,#2b1a52 0%,#0d0820 100%);border-bottom:1px solid rgba(255,255,255,.08);scroll-margin-top:calc(var(--header-height,60px) + var(--nav-height,52px));overflow:hidden}
+.quiz-title{display:flex;align-items:center;gap:.7rem;font-family:var(--font-heading,sans-serif);font-weight:800;color:#fff;font-size:clamp(1.3rem,3.2vw,2.1rem);z-index:5}
+.quiz-title .qb{width:44px;height:44px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;background:linear-gradient(135deg,#FF4757,#FECA57,#2ED573,#1E90FF,#A55EEA)}
+.quiz-dots{display:flex;gap:6px;z-index:5}
+.quiz-dots i{width:12px;height:12px;border-radius:50%;background:rgba(255,255,255,.18);transition:background .3s,transform .3s}
+.quiz-dots i.cur{transform:scale(1.4);background:#fff}.quiz-dots i.ok{background:#2ED573}.quiz-dots i.no{background:#FF4757}
+.quiz-card{z-index:5;width:100%;max-width:560px;border-radius:22px;padding:1.4rem 1rem;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);text-align:center;color:#fff;font-family:var(--font-heading,sans-serif)}
+.quiz-clue{display:flex;justify-content:center;align-items:center;gap:.4rem;font-size:clamp(2rem,9vw,3rem);margin:.4rem 0 1rem;min-height:3.4rem}
+.quiz-clue span{animation:cluein .5s cubic-bezier(.3,1.6,.5,1) backwards}
+.quiz-clue span:nth-child(2){animation-delay:.1s}.quiz-clue span:nth-child(3){animation-delay:.2s}.quiz-clue span:nth-child(4){animation-delay:.3s}
+@keyframes cluein{from{transform:scale(0) rotate(-40deg);opacity:0}}
+.quiz-ask{font-weight:700;opacity:.85;margin-bottom:.9rem;font-size:1rem}
+.quiz-opts{display:grid;grid-template-columns:repeat(4,1fr);gap:.55rem;max-width:380px;margin:0 auto}
+.quiz-opt{aspect-ratio:1;border:0;border-radius:16px;font-family:var(--font-heading,sans-serif);font-weight:900;font-size:1.6rem;color:#fff;cursor:pointer;background:var(--c);box-shadow:0 6px 0 rgba(0,0,0,.3);transition:transform .15s;-webkit-tap-highlight-color:transparent}
+.quiz-opt:active{transform:translateY(4px);box-shadow:0 2px 0 rgba(0,0,0,.3)}
+.quiz-opt[disabled]{opacity:.3;pointer-events:none}
+.quiz-opt.good{animation:good .5s}.quiz-card.shake{animation:shake .4s}
+@keyframes good{50%{transform:scale(1.25)}}
+@keyframes shake{20%,60%{transform:translateX(-8px)}40%,80%{transform:translateX(8px)}}
+.quiz-end{font-size:1.05rem}.quiz-end .big{font-size:3.2rem}.quiz-end .rank{font-weight:900;font-size:1.5rem;margin:.3rem 0 1rem;background:linear-gradient(90deg,#FECA57,#FF6EB4);-webkit-background-clip:text;background-clip:text;color:transparent}
+.quiz-again{border:0;border-radius:999px;padding:.6rem 1.4rem;font-weight:800;font-size:1rem;cursor:pointer;background:#fff;color:#1e1b4b}
+@media (max-width:640px){.cam-buddy{width:52px;height:52px}.buddy-bubble{top:-30px;right:38px;font-size:1.15rem}.stage-mark{right:6px;bottom:5px}.quiz-opts{grid-template-columns:repeat(4,1fr)}}
+@media (prefers-reduced-motion:reduce){.ambient{display:none}.cam-buddy svg{animation:none}.story-step.on{transform:none}}
+.header-controls{display:flex;flex-direction:row;align-items:center;gap:.4rem}
+@media (max-width:640px){.header-controls .btn-icon{width:34px;height:34px}}
+
+</style>
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER & NAVIGATION
+       ========================================== -->
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <div class="header-brand">
+        <span class="brand-camera-icon">
+          <svg viewBox="0 0 32 32" width="28" height="28" fill="none">
+            <rect x="2" y="7" width="22" height="18" rx="5" fill="#FF4757"/>
+            <path d="M24 12L30 8V24L24 20V12Z" fill="#FFA502"/>
+            <circle cx="13" cy="16" r="5" fill="#FFFFFF"/>
+            <circle cx="13" cy="16" r="3" fill="#1E90FF"/>
+            <circle cx="14" cy="15" r="1" fill="#FFFFFF"/>
+            <circle cx="6" cy="11" r="1.5" fill="#2ED573"/>
+          </svg>
+        </span>
+        <span class="brand-title">SCAMPER CCTV</span>
+      </div>
+
+      <!-- Medium size, clearly visible author in header as requested -->
+      <div class="header-author">
+        <span class="author-label">Created by</span>
+        <span class="author-name">Balaji</span>
+      </div>
+
+      <div class="header-controls">
+        <button id="motionToggle" class="btn-icon" aria-label="Toggle animations" title="Toggle animation effects">
+          <svg class="icon-play" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       STICKY MINI PROGRESS BAR (S C A M P E R)
+       ========================================== -->
+  <nav class="scamper-nav" id="scamperNav" aria-label="SCAMPER navigation">
+    <div class="scamper-nav-track">
+      <a href="#scene-s" class="nav-letter letter-s active" data-scene="s" title="S - Substitute">
+        <span class="letter-badge">S</span>
+        <span class="nav-label">Substitute</span>
+      </a>
+      <a href="#scene-c" class="nav-letter letter-c" data-scene="c" title="C - Combine">
+        <span class="letter-badge">C</span>
+        <span class="nav-label">Combine</span>
+      </a>
+      <a href="#scene-a" class="nav-letter letter-a" data-scene="a" title="A - Adapt">
+        <span class="letter-badge">A</span>
+        <span class="nav-label">Adapt</span>
+      </a>
+      <a href="#scene-m" class="nav-letter letter-m" data-scene="m" title="M - Modify">
+        <span class="letter-badge">M</span>
+        <span class="nav-label">Modify</span>
+      </a>
+      <a href="#scene-p" class="nav-letter letter-p" data-scene="p" title="P - Put to another use">
+        <span class="letter-badge">P</span>
+        <span class="nav-label">Put to Use</span>
+      </a>
+      <a href="#scene-e" class="nav-letter letter-e" data-scene="e" title="E - Eliminate">
+        <span class="letter-badge">E</span>
+        <span class="nav-label">Eliminate</span>
+      </a>
+      <a href="#scene-r" class="nav-letter letter-r" data-scene="r" title="R - Reverse">
+        <span class="letter-badge">R</span>
+        <span class="nav-label">Reverse</span>
+      </a>
+    </div>
+  </nav>
+
+  <main id="mainContent">
+
+    <!-- ==========================================
+         INTRO SCREEN
+         ========================================== -->
+    <section class="screen intro-screen" id="intro">
+      <div class="screen-bg-glow"></div>
+      
+      <!-- Subtle Campus Silhouette in Background -->
+      <div class="campus-skyline-bg" aria-hidden="true">
+        <svg viewBox="0 0 1200 240" preserveAspectRatio="none" class="skyline-svg">
+          <path d="M0,240 L0,180 L40,180 L40,140 L70,120 L100,140 L100,180 L180,180 L180,110 L230,110 L230,80 L260,60 L290,80 L290,110 L340,110 L340,180 L450,180 L450,130 L480,130 L480,180 L560,180 L560,90 L610,60 L660,90 L660,180 L760,180 L760,120 L820,120 L820,180 L920,180 L920,100 L950,80 L980,100 L980,180 L1070,180 L1070,140 L1120,140 L1120,180 L1200,180 L1200,240 Z" fill="rgba(255,255,255,0.06)"/>
+          <circle cx="80" cy="50" r="30" fill="rgba(255,255,255,0.08)"/>
+        </svg>
+      </div>
+
+      <div class="intro-container">
+        <div class="intro-badge-pill">SMART CAMPUS CCTV</div>
+        <h1 class="intro-title">SCAMPER on CCTV</h1>
+        <p class="intro-tagline">Smart Campus Camera</p>
+
+        <!-- The 7 colorful letters popping in -->
+        <div class="letters-pop-grid" id="lettersPop">
+          <span class="pop-char char-s" style="--delay: 0.1s">S</span>
+          <span class="pop-char char-c" style="--delay: 0.2s">C</span>
+          <span class="pop-char char-a" style="--delay: 0.3s">A</span>
+          <span class="pop-char char-m" style="--delay: 0.4s">M</span>
+          <span class="pop-char char-p" style="--delay: 0.5s">P</span>
+          <span class="pop-char char-e" style="--delay: 0.6s">E</span>
+          <span class="pop-char char-r" style="--delay: 0.7s">R</span>
+        </div>
+
+        <!-- Mascot Camera Animation -->
+        <div class="hero-mascot-wrap">
+          <div class="hero-mascot interactive-char" data-tooltip="Hi! Tap me!" tabindex="0" role="button" aria-label="CamBot mascot">
+            <svg viewBox="0 0 200 200" class="mascot-svg">
+              <defs>
+                <linearGradient id="robotGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#FFFFFF"/>
+                  <stop offset="100%" stop-color="#DFF3FF"/>
+                </linearGradient>
+                <linearGradient id="visorGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#0A192F"/>
+                  <stop offset="100%" stop-color="#172A45"/>
+                </linearGradient>
+                <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur stdDeviation="3" result="blur"/>
+                  <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                </filter>
+              </defs>
+              <!-- Mascot Shadow -->
+              <ellipse cx="100" cy="180" rx="42" ry="12" fill="rgba(0,0,0,0.18)" class="char-shadow"/>
+              <!-- Mascot Body Hover Group -->
+              <g class="mascot-hover-body">
+                <!-- Antenna -->
+                <path d="M100,50 L100,28" stroke="#70A1FF" stroke-width="4" stroke-linecap="round"/>
+                <circle cx="100" cy="24" r="8" fill="#00D2D3" filter="url(#glowCyan)" class="antenna-ball"/>
+                <circle cx="100" cy="24" r="4" fill="#FFFFFF"/>
+                <!-- Thruster Ring & Jets -->
+                <ellipse cx="100" cy="148" rx="28" ry="8" fill="#70A1FF"/>
+                <path d="M88,154 Q100,175 112,154 Z" fill="#00D2D3" class="jet-flame"/>
+                <!-- Robot Head / Body -->
+                <rect x="52" y="46" width="96" height="102" rx="48" fill="url(#robotGrad)" stroke="#E0E6ED" stroke-width="3"/>
+                <!-- Cheeks -->
+                <circle cx="68" cy="116" r="7" fill="#FF7F50" opacity="0.6"/>
+                <circle cx="132" cy="116" r="7" fill="#FF7F50" opacity="0.6"/>
+                <!-- Visor Screen -->
+                <rect x="64" y="74" width="72" height="42" rx="16" fill="url(#visorGrad)"/>
+                <!-- Expressive Cyan Eyes -->
+                <g class="mascot-eyes" filter="url(#glowCyan)">
+                  <ellipse cx="82" cy="95" rx="7" ry="10" fill="#00D2D3" class="eye-left"/>
+                  <ellipse cx="118" cy="95" rx="7" ry="10" fill="#00D2D3" class="eye-right"/>
+                  <!-- Eye Sparkles -->
+                  <circle cx="85" cy="92" r="2.5" fill="#FFFFFF"/>
+                  <circle cx="121" cy="92" r="2.5" fill="#FFFFFF"/>
+                </g>
+                <!-- Waving Left Arm -->
+                <g class="mascot-wave-arm">
+                  <path d="M52,98 Q30,80 34,64" stroke="#DFF3FF" stroke-width="8" stroke-linecap="round" fill="none"/>
+                  <circle cx="34" cy="62" r="8" fill="#00D2D3"/>
+                </g>
+                <!-- Right Arm -->
+                <path d="M148,98 Q164,110 166,125" stroke="#DFF3FF" stroke-width="8" stroke-linecap="round" fill="none"/>
+                <circle cx="166" cy="126" r="7" fill="#70A1FF"/>
+                <!-- Camera Badge on Chest -->
+                <circle cx="100" cy="132" r="6" fill="#FF4757"/>
+                <circle cx="100" cy="132" r="2.5" fill="#FFFFFF"/>
+              </g>
+            </svg>
+          </div>
+          <div class="mascot-speech-bubble">Explore the 7 Scenes! 👇</div>
+        </div>
+
+        <a href="#scene-s" class="scroll-down-btn" aria-label="Scroll to first scene">
+          <span class="btn-text">Begin Campus Tour</span>
+          <svg class="chevron-svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SCENE 1: S - SUBSTITUTE (Red: #FF4757)
+         Control Room: Guard sleeping at monitors. AI mascot wakes up,
+         scans screens, spots person with red box, sends alert to guard's phone.
+         =================================================================== -->
+    <section class="scene-section scene-s" id="scene-s" data-letter="S">
+      <div class="scene-header">
+        <div class="scene-badge badge-s">S</div>
+        <h2 class="scene-title">AI Guard Assistant</h2>
+      </div>
+
+      <div class="scene-stage">
+        <!-- SVG Canvas for Scene 1 -->
+        <svg viewBox="0 0 800 500" class="scene-svg" id="svg-scene-s" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <linearGradient id="crWallGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#2D1117"/>
+              <stop offset="100%" stop-color="#18090C"/>
+            </linearGradient>
+            <linearGradient id="crDeskGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#3D1D23"/>
+              <stop offset="100%" stop-color="#55242C"/>
+            </linearGradient>
+            <radialGradient id="screenGlowGrad" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#1E90FF" stop-opacity="0.3"/>
+              <stop offset="100%" stop-color="#0A192F" stop-opacity="0.8"/>
+            </radialGradient>
+            <filter id="alertGlow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="4" result="blur"/>
+              <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+            </filter>
+          </defs>
+
+          <!-- Control Room Background Wall -->
+          <rect x="0" y="0" width="800" height="500" fill="url(#crWallGrad)"/>
+          <line x1="0" y1="360" x2="800" y2="360" stroke="#FF4757" stroke-width="1.5" opacity="0.3"/>
+          <rect x="0" y="360" width="800" height="140" fill="#140608"/>
+
+          <!-- Wall Monitor Bank (6 screens) -->
+          <!-- Monitor Frame Backing -->
+          <rect x="80" y="40" width="640" height="230" rx="10" fill="#1B1214" stroke="#482228" stroke-width="3"/>
+          
+          <!-- Screen 1: Library -->
+          <rect x="100" y="55" width="180" height="95" rx="5" fill="#0A121E" stroke="#253549" stroke-width="2"/>
+          <path d="M120,130 L160,95 L200,120 L240,85 L260,130" stroke="#224263" stroke-width="2" fill="none"/>
+          <text x="110" y="73" fill="#6A8CAE" font-size="9" font-family="monospace">CAM 01 • LIBRARY</text>
+          
+          <!-- Screen 2: Gate (Normal) -->
+          <rect x="310" y="55" width="180" height="95" rx="5" fill="#0A121E" stroke="#253549" stroke-width="2"/>
+          <circle cx="400" cy="100" r="18" fill="#1A2D44"/>
+          <text x="320" y="73" fill="#6A8CAE" font-size="9" font-family="monospace">CAM 02 • MAIN GATE</text>
+
+          <!-- Screen 3: Dark Lane (TARGET DETECTED HERE) -->
+          <rect x="520" y="55" width="180" height="95" rx="5" fill="#0B1524" stroke="#253549" stroke-width="2" id="sScreenTarget"/>
+          <text x="530" y="73" fill="#FF6B81" font-size="9" font-family="monospace">CAM 03 • LANE 4</text>
+          <!-- Intruder Silhouette on Screen 3 -->
+          <g class="intruder-silhouette">
+            <circle cx="610" cy="98" r="7" fill="#607D8B"/>
+            <path d="M603,107 Q610,105 617,107 L621,135 L599,135 Z" fill="#607D8B"/>
+          </g>
+          <!-- Red Detection Box (Appears & Pulses) -->
+          <g class="target-box-group" filter="url(#alertGlow)">
+            <rect x="590" y="86" width="40" height="54" fill="none" stroke="#FF4757" stroke-width="2.5" stroke-dasharray="8 3" class="s-target-box"/>
+            <path d="M586,82 L596,82 M586,82 L586,92" stroke="#FF4757" stroke-width="3"/>
+            <path d="M634,82 L624,82 M634,82 L634,92" stroke="#FF4757" stroke-width="3"/>
+            <path d="M586,144 L596,144 M586,144 L586,134" stroke="#FF4757" stroke-width="3"/>
+            <path d="M634,144 L624,144 M634,144 L634,134" stroke="#FF4757" stroke-width="3"/>
+            <!-- Target Tag -->
+            <rect x="588" y="72" width="44" height="12" rx="3" fill="#FF4757"/>
+            <text x="592" y="81" fill="#FFFFFF" font-size="8" font-weight="bold" font-family="sans-serif">ALERT</text>
+          </g>
+
+          <!-- Screen 4: Canteen -->
+          <rect x="100" y="160" width="180" height="95" rx="5" fill="#0A121E" stroke="#253549" stroke-width="2"/>
+          <text x="110" y="178" fill="#6A8CAE" font-size="9" font-family="monospace">CAM 04 • CANTEEN</text>
+
+          <!-- Screen 5: Hallway -->
+          <rect x="310" y="160" width="180" height="95" rx="5" fill="#0A121E" stroke="#253549" stroke-width="2"/>
+          <text x="320" y="178" fill="#6A8CAE" font-size="9" font-family="monospace">CAM 05 • LAB 2</text>
+
+          <!-- Screen 6: Playground -->
+          <rect x="520" y="160" width="180" height="95" rx="5" fill="#0A121E" stroke="#253549" stroke-width="2"/>
+          <text x="530" y="178" fill="#6A8CAE" font-size="9" font-family="monospace">CAM 06 • PLAYGROUND</text>
+
+          <!-- Status LEDs on Monitor Rack -->
+          <circle cx="120" cy="47" r="3" fill="#2ED573"/>
+          <circle cx="132" cy="47" r="3" fill="#2ED573"/>
+          <circle cx="144" cy="47" r="3" fill="#FFA502"/>
+
+          <!-- Security Desk in Foreground -->
+          <rect x="60" y="340" width="680" height="140" rx="8" fill="url(#crDeskGrad)" stroke="#742A36" stroke-width="2"/>
+          <!-- Desk Mat & Keyboard -->
+          <rect x="240" y="352" width="200" height="30" rx="4" fill="#221014"/>
+          <!-- Coffee Mug -->
+          <g transform="translate(180, 345)">
+            <rect x="0" y="0" width="22" height="26" rx="4" fill="#E2E8F0"/>
+            <path d="M22,6 C28,6 28,20 22,20" stroke="#E2E8F0" stroke-width="3" fill="none"/>
+            <ellipse cx="11" cy="4" rx="9" ry="3" fill="#795548"/>
+            <path d="M10,-2 Q7,-8 11,-14" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" fill="none" class="steam-line"/>
+          </g>
+
+          <!-- Guard's Smartphone on Desk (Alert Vibrations!) -->
+          <g class="guard-phone" transform="translate(470, 348)">
+            <!-- Vibration Waves -->
+            <path d="M-6,8 Q-12,18 -6,28" stroke="#FF4757" stroke-width="2" fill="none" class="phone-vibe-left"/>
+            <path d="M26,8 Q32,18 26,28" stroke="#FF4757" stroke-width="2" fill="none" class="phone-vibe-right"/>
+            <!-- Phone Body -->
+            <rect x="0" y="0" width="20" height="36" rx="4" fill="#1E293B" stroke="#64748B" stroke-width="1.5"/>
+            <!-- Phone Screen (Flashes Red Alert) -->
+            <rect x="2" y="4" width="16" height="28" rx="2" fill="#FF4757" class="phone-screen-flash"/>
+            <!-- Warning Icon on Phone -->
+            <polygon points="10,8 5,20 15,20" fill="#FFFFFF"/>
+            <circle cx="10" cy="24" r="1.5" fill="#FFFFFF"/>
+          </g>
+
+          <!-- Guard Character (Sleeping then Snapping Awake) -->
+          <g class="guard-character interactive-char" data-tooltip="Officer Dan: Zzz... Tap me!" tabindex="0" role="button" aria-label="Security Guard">
+            <!-- Chair Back -->
+            <rect x="270" y="270" width="90" height="120" rx="14" fill="#1A1F2C"/>
+            
+            <g class="guard-body-group">
+              <!-- Guard Torso / Uniform -->
+              <path d="M280,335 Q315,315 350,335 L355,420 L275,420 Z" fill="#1E3799"/>
+              <!-- Shoulder Epaulets & Gold Badges -->
+              <rect x="280" y="332" width="16" height="6" rx="2" fill="#FFA502"/>
+              <rect x="334" y="332" width="16" height="6" rx="2" fill="#FFA502"/>
+              <!-- Gold Shield Badge -->
+              <polygon points="325,348 335,348 335,360 330,366 325,360" fill="#FFD700"/>
+
+              <!-- Sleeping Arms Crossed on Desk -->
+              <ellipse cx="315" cy="360" rx="36" ry="12" fill="#152870"/>
+
+              <!-- Guard Head (Tilts down while sleeping, pops up on alert!) -->
+              <g class="guard-head">
+                <circle cx="315" cy="295" r="26" fill="#FAD0C4"/>
+                <!-- Cheeks -->
+                <circle cx="298" cy="305" r="4" fill="#FF8A80" opacity="0.6"/>
+                <circle cx="332" cy="305" r="4" fill="#FF8A80" opacity="0.6"/>
+                <!-- Curved Mustache -->
+                <path d="M305,306 Q315,314 325,306 Q315,302 305,306 Z" fill="#4A342B"/>
+                
+                <!-- Eyes Sleeping (Lines) vs Awake (Big circles) -->
+                <g class="guard-eyes-sleeping">
+                  <path d="M300,295 Q305,299 310,295" stroke="#4A342B" stroke-width="2.5" fill="none"/>
+                  <path d="M320,295 Q325,299 330,295" stroke="#4A342B" stroke-width="2.5" fill="none"/>
+                </g>
+                <g class="guard-eyes-awake">
+                  <circle cx="305" cy="293" r="6" fill="#FFFFFF"/>
+                  <circle cx="325" cy="293" r="6" fill="#FFFFFF"/>
+                  <circle cx="305" cy="293" r="3.5" fill="#1E293B"/>
+                  <circle cx="325" cy="293" r="3.5" fill="#1E293B"/>
+                </g>
+
+                <!-- Guard Peaked Cap -->
+                <ellipse cx="315" cy="276" rx="28" ry="10" fill="#1E3799"/>
+                <path d="M292,274 Q315,260 338,274 L342,282 L288,282 Z" fill="#1E3799"/>
+                <!-- Cap Visor (Black) -->
+                <path d="M292,282 Q315,290 338,282 L342,286 Q315,296 288,286 Z" fill="#111827"/>
+                <!-- Gold Band & Emblem on Cap -->
+                <rect x="294" y="278" width="42" height="4" fill="#FFA502"/>
+                <circle cx="315" cy="273" r="4" fill="#FFD700"/>
+              </g>
+            </g>
+
+            <!-- Floating Zzz (Sleeping Guard) -->
+            <g class="floating-zzz">
+              <text x="345" y="270" fill="#FFA502" font-size="16" font-family="'Fredoka', sans-serif" font-weight="bold" class="zzz-1">Z</text>
+              <text x="358" y="252" fill="#FFA502" font-size="20" font-family="'Fredoka', sans-serif" font-weight="bold" class="zzz-2">z</text>
+              <text x="372" y="232" fill="#FFA502" font-size="24" font-family="'Fredoka', sans-serif" font-weight="bold" class="zzz-3">z</text>
+            </g>
+
+            <!-- Exclamation Mark Bubble (Wakes Up) -->
+            <g class="guard-exclamation">
+              <circle cx="350" cy="245" r="16" fill="#FF4757"/>
+              <text x="346" y="252" fill="#FFFFFF" font-size="20" font-family="'Outfit', sans-serif" font-weight="900">!</text>
+            </g>
+          </g>
+
+          <!-- AI Robot Mascot ("CamBot") - Floats in, scans screens, alerts phone -->
+          <g class="cambot-character interactive-char" data-tooltip="CamBot: AI Surveillance Mascot" tabindex="0" role="button" aria-label="AI Robot Mascot">
+            <!-- Volumetric Blue Scanning Beam from Robot Eye to Monitors -->
+            <polygon points="560,260 520,60 700,60" fill="url(#screenGlowGrad)" class="cambot-scan-beam"/>
+            
+            <!-- Alert Ray from Robot to Guard Phone -->
+            <path d="M570,300 Q540,320 480,345" stroke="#FF4757" stroke-width="3" stroke-dasharray="6 4" fill="none" class="alert-wifi-beam"/>
+            <circle cx="485" cy="343" r="5" fill="#FF4757" class="alert-pulse-circle"/>
+
+            <!-- Robot Body Group -->
+            <g class="cambot-float-group" transform="translate(530, 220)">
+              <!-- Hover Jet Effect -->
+              <ellipse cx="38" cy="80" rx="14" ry="4" fill="rgba(0,210,211,0.5)" class="robot-jet"/>
+              
+              <!-- Rounded Egg Body -->
+              <rect x="8" y="10" width="60" height="68" rx="30" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+              <!-- Screen Visor -->
+              <rect x="16" y="25" width="44" height="26" rx="10" fill="#0A192F"/>
+              <!-- Visor Eyes: Active scanning -->
+              <ellipse cx="28" cy="38" rx="4" ry="6" fill="#00D2D3" class="cambot-eye-l"/>
+              <ellipse cx="48" cy="38" rx="4" ry="6" fill="#00D2D3" class="cambot-eye-r"/>
+              <!-- Antenna & Glowing Orb -->
+              <line x1="38" y1="10" x2="38" y2="-2" stroke="#70A1FF" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="38" cy="-5" r="5" fill="#FF4757" class="cambot-antenna-light" filter="url(#alertGlow)"/>
+              <!-- Cheeks -->
+              <circle cx="18" cy="52" r="3" fill="#FF7F50" opacity="0.6"/>
+              <circle cx="58" cy="52" r="3" fill="#FF7F50" opacity="0.6"/>
+              <!-- Little Robot Arms (Pointing to screens) -->
+              <path d="M8,42 Q-6,30 2,20" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" fill="none"/>
+              <circle cx="2" cy="19" r="4" fill="#00D2D3"/>
+              <path d="M68,42 Q82,45 80,56" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" fill="none"/>
+              <circle cx="80" cy="56" r="4" fill="#70A1FF"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <!-- Action micro-replay control -->
+      <div class="scene-actions">
+        <button class="scene-replay-btn" data-target="scene-s">Replay Action ↺</button>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SCENE 2: C - COMBINE (Orange: #FF7F50)
+         Canteen: Camera with thermal sensor & siren.
+         Fire appears, thermometer rises, siren flashes. Hand covers lens -> siren rings again!
+         =================================================================== -->
+    <section class="scene-section scene-c" id="scene-c" data-letter="C">
+      <div class="scene-header">
+        <div class="scene-badge badge-c">C</div>
+        <h2 class="scene-title">Thermal Fire Siren</h2>
+      </div>
+
+      <div class="scene-stage">
+        <svg viewBox="0 0 800 500" class="scene-svg" id="svg-scene-c" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <linearGradient id="canteenWallGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#2D1306"/>
+              <stop offset="100%" stop-color="#140802"/>
+            </linearGradient>
+            <linearGradient id="fireGrad" x1="0" y1="1" x2="0" y2="0">
+              <stop offset="0%" stop-color="#FF3838"/>
+              <stop offset="50%" stop-color="#FF7F50"/>
+              <stop offset="100%" stop-color="#FFD700"/>
+            </linearGradient>
+            <linearGradient id="thermoGrad" x1="0" y1="1" x2="0" y2="0">
+              <stop offset="0%" stop-color="#2ED573"/>
+              <stop offset="50%" stop-color="#FFA502"/>
+              <stop offset="100%" stop-color="#FF4757"/>
+            </linearGradient>
+            <filter id="sirenStrobe" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="6" result="blur"/>
+              <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+            </filter>
+          </defs>
+
+          <!-- Canteen Background Wall with Kitchen Tile Pattern -->
+          <rect x="0" y="0" width="800" height="500" fill="url(#canteenWallGrad)"/>
+          <g opacity="0.08" stroke="#FFFFFF" stroke-width="1">
+            <line x1="0" y1="80" x2="800" y2="80"/>
+            <line x1="0" y1="160" x2="800" y2="160"/>
+            <line x1="0" y1="240" x2="800" y2="240"/>
+            <line x1="0" y1="320" x2="800" y2="320"/>
+            <line x1="160" y1="0" x2="160" y2="360"/>
+            <line x1="320" y1="0" x2="320" y2="360"/>
+            <line x1="480" y1="0" x2="480" y2="360"/>
+            <line x1="640" y1="0" x2="640" y2="360"/>
+          </g>
+          <!-- Floor -->
+          <rect x="0" y="370" width="800" height="130" fill="#1C0A02"/>
+          <line x1="0" y1="370" x2="800" y2="370" stroke="#FF7F50" stroke-width="2" opacity="0.4"/>
+
+          <!-- Canteen Counter Table -->
+          <rect x="120" y="310" width="560" height="90" rx="6" fill="#3D1A08" stroke="#682D0E" stroke-width="2"/>
+          <rect x="100" y="300" width="600" height="18" rx="4" fill="#58240A"/>
+          
+          <!-- Stove / Burner on Counter -->
+          <rect x="220" y="285" width="130" height="16" rx="3" fill="#2D3748"/>
+          <ellipse cx="285" cy="285" rx="36" ry="6" fill="#1A202C"/>
+          <ellipse cx="285" cy="285" rx="20" ry="3" fill="#4A5568"/>
+
+          <!-- Animated Fire Flames on Stove -->
+          <g class="canteen-fire-group" filter="url(#sirenStrobe)">
+            <!-- Outer Flame -->
+            <path d="M255,282 Q270,210 285,170 Q300,210 315,282 Q285,290 255,282 Z" fill="url(#fireGrad)" class="flame-outer"/>
+            <!-- Inner Flame -->
+            <path d="M268,282 Q280,230 285,200 Q292,230 302,282 Z" fill="#FFEAA7" class="flame-inner"/>
+            <!-- Spark Particles -->
+            <circle cx="280" cy="180" r="3" fill="#FFA502" class="fire-spark sp-1"/>
+            <circle cx="295" cy="165" r="2.5" fill="#FF4757" class="fire-spark sp-2"/>
+            <circle cx="270" cy="195" r="2" fill="#FFD700" class="fire-spark sp-3"/>
+          </g>
+
+          <!-- Cute Student in Canteen (Mia - backing away surprised!) -->
+          <g class="student-mia interactive-char" transform="translate(130, 220)" data-tooltip="Mia: Whoa, fire!" tabindex="0" role="button" aria-label="Student Mia">
+            <ellipse cx="30" cy="155" rx="20" ry="6" fill="rgba(0,0,0,0.3)"/>
+            <!-- Body: Orange Hoodie -->
+            <path d="M15,95 Q30,85 45,95 L48,150 L12,150 Z" fill="#FF7F50"/>
+            <!-- Head -->
+            <circle cx="30" cy="65" r="18" fill="#FAD0C4"/>
+            <!-- Ponytail -->
+            <path d="M16,55 Q5,50 8,36 Q22,40 26,52 Z" fill="#4A2E18"/>
+            <circle cx="16" cy="52" r="4" fill="#FF4757"/>
+            <!-- Eyes Surprised -->
+            <circle cx="26" cy="64" r="3" fill="#1E293B"/>
+            <circle cx="36" cy="64" r="3" fill="#1E293B"/>
+            <!-- Mouth O -->
+            <ellipse cx="31" cy="74" rx="3.5" ry="5" fill="#4A2E18"/>
+            <!-- Arms Up Surprised -->
+            <path d="M14,98 Q-2,85 2,72" stroke="#FF7F50" stroke-width="6" stroke-linecap="round" fill="none"/>
+            <path d="M46,98 Q62,85 58,72" stroke="#FF7F50" stroke-width="6" stroke-linecap="round" fill="none"/>
+          </g>
+
+          <!-- Wall Mount Bracket for Camera -->
+          <rect x="470" y="30" width="16" height="50" fill="#4A5568"/>
+          <path d="M470,60 L420,60 L420,80" stroke="#718096" stroke-width="8" stroke-linecap="round" fill="none"/>
+
+          <!-- ==============================================
+               THE COMBINED CAMERA (Camera + Thermal + Siren)
+               ============================================== -->
+          <g class="combined-camera-unit" transform="translate(370, 70)">
+            <!-- Top Emergency Siren -->
+            <g class="siren-unit" filter="url(#sirenStrobe)">
+              <rect x="36" y="2" width="28" height="12" rx="3" fill="#2D3748"/>
+              <!-- Siren Dome (Flashes Orange/Red) -->
+              <path d="M38,2 Q50,-16 62,2 Z" fill="#FF3838" class="siren-dome-lens"/>
+              <!-- Flashing Siren Light Beams -->
+              <polygon points="50,-8 10,-40 25,-48" fill="rgba(255, 71, 87, 0.45)" class="siren-beam beam-l"/>
+              <polygon points="50,-8 90,-40 75,-48" fill="rgba(255, 127, 80, 0.45)" class="siren-beam beam-r"/>
+              <!-- Sonic Sound Ripples -->
+              <path d="M26,-10 A30,30 0 0,0 26,14" stroke="#FF3838" stroke-width="3" fill="none" class="sonic-wave s-1"/>
+              <path d="M74,-10 A30,30 0 0,1 74,14" stroke="#FF7F50" stroke-width="3" fill="none" class="sonic-wave s-2"/>
+            </g>
+
+            <!-- Camera Main Body -->
+            <rect x="20" y="14" width="70" height="38" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+            
+            <!-- Standard Optical Lens -->
+            <rect x="5" y="22" width="16" height="22" rx="4" fill="#334155"/>
+            <circle cx="12" cy="33" r="7" fill="#0EA5E9" id="cNormalLens"/>
+            <circle cx="10" cy="31" r="2" fill="#FFFFFF"/>
+
+            <!-- Integrated Thermal IR Sensor Below Lens -->
+            <g class="thermal-sensor-lens" transform="translate(18, 52)">
+              <rect x="0" y="0" width="34" height="14" rx="4" fill="#1E293B" stroke="#FF7F50" stroke-width="1.5"/>
+              <circle cx="8" cy="7" r="4" fill="#FF4757"/>
+              <circle cx="24" cy="7" r="4" fill="#FFA502"/>
+              <text x="38" y="11" fill="#FF7F50" font-size="8" font-family="'Fredoka', sans-serif" font-weight="bold">IR THERMAL</text>
+            </g>
+
+            <!-- Thermal Heat Ray from Sensor toward Fire -->
+            <polygon points="18,58 -80,220 -30,220" fill="rgba(255, 127, 80, 0.25)" class="thermal-scan-cone"/>
+          </g>
+
+          <!-- Thermometer Indicator Widget (Rises from 24°C to 120°C!) -->
+          <g class="thermo-widget" transform="translate(560, 90)">
+            <!-- Background panel -->
+            <rect x="0" y="0" width="75" height="140" rx="8" fill="#1E130B" stroke="#FF7F50" stroke-width="2"/>
+            <text x="12" y="18" fill="#FFA502" font-size="9" font-family="'Fredoka', sans-serif" font-weight="bold">TEMP °C</text>
+            
+            <!-- Thermometer Glass Tube -->
+            <rect x="22" y="28" width="12" height="75" rx="6" fill="#0F172A" stroke="#475569" stroke-width="1.5"/>
+            <!-- Thermometer Bulb -->
+            <circle cx="28" cy="112" r="14" fill="#FF3838"/>
+            <circle cx="25" cy="110" r="4" fill="#FFFFFF" opacity="0.6"/>
+            <!-- Liquid Mercury (Animated Height!) -->
+            <rect x="24" y="98" width="8" height="10" rx="4" fill="url(#thermoGrad)" class="thermo-mercury-bar"/>
+            
+            <!-- Scale Ticks -->
+            <line x1="38" y1="36" x2="44" y2="36" stroke="#EF4444" stroke-width="1.5"/>
+            <text x="47" y="39" fill="#EF4444" font-size="7" font-family="monospace">120°</text>
+            <line x1="38" y1="62" x2="44" y2="62" stroke="#F59E0B" stroke-width="1.5"/>
+            <text x="47" y="65" fill="#F59E0B" font-size="7" font-family="monospace">60°</text>
+            <line x1="38" y1="88" x2="44" y2="88" stroke="#10B981" stroke-width="1.5"/>
+            <text x="47" y="91" fill="#10B981" font-size="7" font-family="monospace">24°</text>
+            <!-- Current Temp Digital readout -->
+            <text x="12" y="132" fill="#FF4757" font-size="11" font-family="'Outfit', sans-serif" font-weight="900" class="thermo-digits">98°C</text>
+          </g>
+
+          <!-- Mischievous Hand Covering Lens (Tamper Detection Sequence) -->
+          <g class="tamper-hand-group">
+            <!-- Cartoon Arm & Hand coming from top-left -->
+            <path d="M300,40 Q350,70 380,95" stroke="#FAD0C4" stroke-width="16" stroke-linecap="round" fill="none" class="tamper-arm"/>
+            <!-- Palm & Fingers slapping over the lens -->
+            <ellipse cx="382" cy="98" rx="14" ry="12" fill="#FAD0C4" class="tamper-palm"/>
+            <rect x="372" y="90" width="8" height="16" rx="4" fill="#FAD0C4" transform="rotate(-20 376 98)"/>
+            <rect x="380" y="88" width="8" height="18" rx="4" fill="#FAD0C4" transform="rotate(-5 384 97)"/>
+            <rect x="388" y="90" width="8" height="16" rx="4" fill="#FAD0C4" transform="rotate(15 392 98)"/>
+
+            <!-- Tamper Alert Icon over camera -->
+            <g class="tamper-alert-badge" transform="translate(365, 125)">
+              <rect x="0" y="0" width="80" height="22" rx="4" fill="#FF3838" stroke="#FFFFFF" stroke-width="1.5"/>
+              <text x="7" y="15" fill="#FFFFFF" font-size="9" font-family="'Fredoka', sans-serif" font-weight="bold">TAMPER ALERT!</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <div class="scene-actions">
+        <button class="scene-replay-btn" data-target="scene-c">Replay Action ↺</button>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SCENE 3: A - ADAPT (Yellow: #FFA502)
+         Classroom: Students sit in a classroom. Camera scans their faces one by one,
+         each gets a green tick, attendance counter goes up (0/4 -> 4/4).
+         =================================================================== -->
+    <section class="scene-section scene-a" id="scene-a" data-letter="A">
+      <div class="scene-header">
+        <div class="scene-badge badge-a">A</div>
+        <h2 class="scene-title">Class Attendance Scan</h2>
+      </div>
+
+      <div class="scene-stage">
+        <svg viewBox="0 0 800 500" class="scene-svg" id="svg-scene-a" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <linearGradient id="classWallGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#261A02"/>
+              <stop offset="100%" stop-color="#140C01"/>
+            </linearGradient>
+            <linearGradient id="chalkboardGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#1E392A"/>
+              <stop offset="100%" stop-color="#0F2419"/>
+            </linearGradient>
+            <radialGradient id="faceScanRay" cx="50%" cy="0%" r="100%">
+              <stop offset="0%" stop-color="#2ED573" stop-opacity="0.55"/>
+              <stop offset="100%" stop-color="#2ED573" stop-opacity="0"/>
+            </radialGradient>
+            <filter id="tickGlow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="3" result="blur"/>
+              <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+            </filter>
+          </defs>
+
+          <!-- Classroom Wall Background -->
+          <rect x="0" y="0" width="800" height="500" fill="url(#classWallGrad)"/>
+          <line x1="0" y1="360" x2="800" y2="360" stroke="#FFA502" stroke-width="2" opacity="0.3"/>
+          <rect x="0" y="360" width="800" height="140" fill="#140901"/>
+
+          <!-- Chalkboard in Background -->
+          <rect x="80" y="70" width="460" height="150" rx="8" fill="url(#chalkboardGrad)" stroke="#8D6E63" stroke-width="6"/>
+          <!-- Chalk Text / Equations -->
+          <text x="110" y="110" fill="#E8F5E9" font-size="16" font-family="'Fredoka', cursive" opacity="0.85">AI SMART ATTENDANCE 101</text>
+          <path d="M110,130 L180,130 M110,150 L240,150 M110,170 L200,170" stroke="#C8E6C9" stroke-width="2" stroke-dasharray="6 4" opacity="0.5"/>
+          <text x="320" y="145" fill="#FFEAA7" font-size="14" font-family="monospace">Camera → FaceID → ✔</text>
+
+          <!-- Digital Classroom Attendance Display on Wall -->
+          <g class="attendance-board" transform="translate(580, 70)">
+            <rect x="0" y="0" width="160" height="130" rx="10" fill="#1A1508" stroke="#FFA502" stroke-width="2.5"/>
+            <text x="16" y="26" fill="#FFA502" font-size="10" font-family="'Fredoka', sans-serif" font-weight="bold">ATTENDANCE</text>
+            <!-- Large Counter Number -->
+            <rect x="16" y="36" width="128" height="50" rx="6" fill="#0B0903"/>
+            <text x="35" y="72" fill="#2ED573" font-size="34" font-family="'Outfit', sans-serif" font-weight="900" class="attend-counter-text">0/4</text>
+            <!-- Status Badge -->
+            <rect x="16" y="96" width="128" height="22" rx="4" fill="#2ED573" class="attend-status-bg"/>
+            <text x="32" y="111" fill="#0B0903" font-size="10" font-family="'Fredoka', sans-serif" font-weight="bold" class="attend-status-text">SCANNING...</text>
+          </g>
+
+          <!-- Smart Ceiling Camera Panning and Scanning -->
+          <g class="classroom-camera-group" transform="translate(400, 20)">
+            <!-- Ceiling Bracket -->
+            <rect x="-10" y="0" width="20" height="20" fill="#4B5563"/>
+            <circle cx="0" cy="24" r="8" fill="#374151"/>
+            
+            <!-- Rotating Camera Head -->
+            <g class="class-cam-head">
+              <rect x="-24" y="24" width="48" height="28" rx="8" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+              <ellipse cx="0" cy="38" rx="12" ry="8" fill="#1F2937"/>
+              <circle cx="0" cy="38" r="6" fill="#2ED573" filter="url(#tickGlow)"/>
+              <circle cx="2" cy="36" r="2" fill="#FFFFFF"/>
+              <!-- Green Scanner Cone Projecting from Camera -->
+              <polygon points="0,42 -70,280 70,280" fill="url(#faceScanRay)" class="face-scan-cone"/>
+            </g>
+          </g>
+
+          <!-- 4 Students Seated at Classroom Desks -->
+
+          <!-- Student 1 (Mia - Orange Hoodie, Ponytail) -->
+          <g class="student-unit student-1" transform="translate(80, 250)">
+            <!-- Wooden Desk -->
+            <rect x="10" y="90" width="120" height="50" rx="4" fill="#6D4C41"/>
+            <rect x="0" y="85" width="140" height="10" rx="2" fill="#8D6E63"/>
+            <rect x="25" y="70" width="35" height="15" rx="2" fill="#3B82F6"/> <!-- Notebook -->
+
+            <!-- Character -->
+            <g class="student-char interactive-char" data-tooltip="Mia: Present!" tabindex="0" role="button" aria-label="Student Mia">
+              <path d="M45,65 Q70,55 95,65 L98,110 L42,110 Z" fill="#FF7F50"/> <!-- Body -->
+              <circle cx="70" cy="40" r="18" fill="#FAD0C4"/> <!-- Head -->
+              <path d="M56,30 Q45,25 48,12 Q62,16 66,28 Z" fill="#4A2E18"/> <!-- Ponytail -->
+              <circle cx="56" cy="28" r="3" fill="#FF4757"/>
+              <circle cx="65" cy="40" r="2.5" fill="#1E293B"/> <!-- Eyes -->
+              <circle cx="75" cy="40" r="2.5" fill="#1E293B"/>
+              <path d="M66,48 Q70,53 74,48" stroke="#1E293B" stroke-width="1.5" fill="none"/> <!-- Smile -->
+            </g>
+
+            <!-- Face Scanning Target Reticle -->
+            <g class="face-target reticle-1">
+              <rect x="52" y="22" width="36" height="36" rx="4" fill="none" stroke="#2ED573" stroke-width="2" stroke-dasharray="6 3"/>
+              <text x="54" y="16" fill="#2ED573" font-size="8" font-family="monospace">ID: MIA</text>
+            </g>
+
+            <!-- Green Tick Bubble (✔) -->
+            <g class="green-tick-badge tick-1" filter="url(#tickGlow)">
+              <circle cx="70" cy="-5" r="14" fill="#2ED573"/>
+              <path d="M64,-5 L68,-1 L77,-10" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </g>
+          </g>
+
+          <!-- Student 2 (Leo - Green Jacket, Glasses) -->
+          <g class="student-unit student-2" transform="translate(240, 250)">
+            <rect x="10" y="90" width="120" height="50" rx="4" fill="#6D4C41"/>
+            <rect x="0" y="85" width="140" height="10" rx="2" fill="#8D6E63"/>
+            <rect x="75" y="68" width="30" height="17" rx="2" fill="#E2E8F0"/> <!-- Tablet -->
+
+            <g class="student-char interactive-char" data-tooltip="Leo: Present!" tabindex="0" role="button" aria-label="Student Leo">
+              <path d="M45,65 Q70,55 95,65 L98,110 L42,110 Z" fill="#2ED573"/> <!-- Body -->
+              <circle cx="70" cy="40" r="18" fill="#FAD0C4"/>
+              <path d="M54,32 Q70,18 86,32 Z" fill="#5D4037"/> <!-- Hair -->
+              <!-- Round Glasses -->
+              <circle cx="64" cy="40" r="5" fill="none" stroke="#1E293B" stroke-width="1.5"/>
+              <circle cx="76" cy="40" r="5" fill="none" stroke="#1E293B" stroke-width="1.5"/>
+              <line x1="69" y1="40" x2="71" y2="40" stroke="#1E293B" stroke-width="1.5"/>
+              <circle cx="64" cy="40" r="2" fill="#1E293B"/>
+              <circle cx="76" cy="40" r="2" fill="#1E293B"/>
+              <path d="M67,48 Q70,52 73,48" stroke="#1E293B" stroke-width="1.5" fill="none"/>
+            </g>
+
+            <g class="face-target reticle-2">
+              <rect x="52" y="22" width="36" height="36" rx="4" fill="none" stroke="#2ED573" stroke-width="2" stroke-dasharray="6 3"/>
+              <text x="54" y="16" fill="#2ED573" font-size="8" font-family="monospace">ID: LEO</text>
+            </g>
+
+            <g class="green-tick-badge tick-2" filter="url(#tickGlow)">
+              <circle cx="70" cy="-5" r="14" fill="#2ED573"/>
+              <path d="M64,-5 L68,-1 L77,-10" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </g>
+          </g>
+
+          <!-- Student 3 (Sam - Yellow Beanie Cap) -->
+          <g class="student-unit student-3" transform="translate(420, 250)">
+            <rect x="10" y="90" width="120" height="50" rx="4" fill="#6D4C41"/>
+            <rect x="0" y="85" width="140" height="10" rx="2" fill="#8D6E63"/>
+            <rect x="30" y="70" width="35" height="15" rx="2" fill="#EF4444"/>
+
+            <g class="student-char interactive-char" data-tooltip="Sam: Present!" tabindex="0" role="button" aria-label="Student Sam">
+              <path d="M45,65 Q70,55 95,65 L98,110 L42,110 Z" fill="#3B82F6"/>
+              <circle cx="70" cy="40" r="18" fill="#FAD0C4"/>
+              <!-- Yellow Cap -->
+              <path d="M54,34 Q70,18 86,34 L88,38 L52,38 Z" fill="#FFA502"/>
+              <circle cx="70" cy="20" r="3" fill="#FF4757"/>
+              <circle cx="65" cy="40" r="2.5" fill="#1E293B"/>
+              <circle cx="75" cy="40" r="2.5" fill="#1E293B"/>
+              <path d="M66,48 Q70,53 74,48" stroke="#1E293B" stroke-width="1.5" fill="none"/>
+            </g>
+
+            <g class="face-target reticle-3">
+              <rect x="52" y="22" width="36" height="36" rx="4" fill="none" stroke="#2ED573" stroke-width="2" stroke-dasharray="6 3"/>
+              <text x="54" y="16" fill="#2ED573" font-size="8" font-family="monospace">ID: SAM</text>
+            </g>
+
+            <g class="green-tick-badge tick-3" filter="url(#tickGlow)">
+              <circle cx="70" cy="-5" r="14" fill="#2ED573"/>
+              <path d="M64,-5 L68,-1 L77,-10" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </g>
+          </g>
+
+          <!-- Student 4 (Zoe - Purple Sweater, Curly Hair) -->
+          <g class="student-unit student-4" transform="translate(600, 250)">
+            <rect x="10" y="90" width="120" height="50" rx="4" fill="#6D4C41"/>
+            <rect x="0" y="85" width="140" height="10" rx="2" fill="#8D6E63"/>
+            <rect x="40" y="68" width="40" height="17" rx="2" fill="#10B981"/>
+
+            <g class="student-char interactive-char" data-tooltip="Zoe: Present!" tabindex="0" role="button" aria-label="Student Zoe">
+              <path d="M45,65 Q70,55 95,65 L98,110 L42,110 Z" fill="#8854D0"/>
+              <!-- Curly Hair background -->
+              <circle cx="58" cy="30" r="10" fill="#3E2723"/>
+              <circle cx="70" cy="24" r="10" fill="#3E2723"/>
+              <circle cx="82" cy="30" r="10" fill="#3E2723"/>
+              <circle cx="70" cy="40" r="18" fill="#FAD0C4"/>
+              <circle cx="65" cy="40" r="2.5" fill="#1E293B"/>
+              <circle cx="75" cy="40" r="2.5" fill="#1E293B"/>
+              <path d="M66,48 Q70,53 74,48" stroke="#1E293B" stroke-width="1.5" fill="none"/>
+            </g>
+
+            <g class="face-target reticle-4">
+              <rect x="52" y="22" width="36" height="36" rx="4" fill="none" stroke="#2ED573" stroke-width="2" stroke-dasharray="6 3"/>
+              <text x="54" y="16" fill="#2ED573" font-size="8" font-family="monospace">ID: ZOE</text>
+            </g>
+
+            <g class="green-tick-badge tick-4" filter="url(#tickGlow)">
+              <circle cx="70" cy="-5" r="14" fill="#2ED573"/>
+              <path d="M64,-5 L68,-1 L77,-10" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <div class="scene-actions">
+        <button class="scene-replay-btn" data-target="scene-a">Replay Action ↺</button>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SCENE 4: M - MODIFY (Green: #2ED573)
+         Dark campus lane at night. Left: camera with 1 small light (small cone).
+         Right: camera with ring of LED lights (wide bright cone).
+         The scene brightens and a student walking becomes clearly visible!
+         =================================================================== -->
+    <section class="scene-section scene-m" id="scene-m" data-letter="M">
+      <div class="scene-header">
+        <div class="scene-badge badge-m">M</div>
+        <h2 class="scene-title">Night Vision Boost</h2>
+      </div>
+
+      <div class="scene-stage">
+        <svg viewBox="0 0 800 500" class="scene-svg" id="svg-scene-m" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <linearGradient id="nightSkyGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#05140C"/>
+              <stop offset="60%" stop-color="#082214"/>
+              <stop offset="100%" stop-color="#04120A"/>
+            </linearGradient>
+            <!-- Weak Dim Cone (Left) -->
+            <radialGradient id="dimConeGrad" cx="20%" cy="20%" r="80%">
+              <stop offset="0%" stop-color="#FFF3B0" stop-opacity="0.35"/>
+              <stop offset="50%" stop-color="#FFF3B0" stop-opacity="0.1"/>
+              <stop offset="100%" stop-color="#FFF3B0" stop-opacity="0"/>
+            </radialGradient>
+            <!-- Wide Bright Cone (Right) -->
+            <radialGradient id="brightConeGrad" cx="50%" cy="0%" r="100%">
+              <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/>
+              <stop offset="30%" stop-color="#7BED9F" stop-opacity="0.75"/>
+              <stop offset="70%" stop-color="#2ED573" stop-opacity="0.4"/>
+              <stop offset="100%" stop-color="#2ED573" stop-opacity="0"/>
+            </radialGradient>
+            <filter id="ledGlowFilter" x="-40%" y="-40%" width="180%" height="180%">
+              <feGaussianBlur stdDeviation="5" result="blur"/>
+              <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+            </filter>
+          </defs>
+
+          <!-- Dark Night Sky -->
+          <rect x="0" y="0" width="800" height="500" fill="url(#nightSkyGrad)"/>
+          
+          <!-- Stars & Crescent Moon -->
+          <g class="night-stars" opacity="0.6">
+            <circle cx="80" cy="50" r="1.5" fill="#FFFFFF"/>
+            <circle cx="210" cy="30" r="2" fill="#FFFFFF"/>
+            <circle cx="340" cy="65" r="1.5" fill="#FFFFFF"/>
+            <circle cx="460" cy="40" r="2" fill="#FFFFFF"/>
+            <circle cx="620" cy="55" r="1.5" fill="#FFFFFF"/>
+            <circle cx="740" cy="35" r="2" fill="#FFFFFF"/>
+            <!-- Crescent Moon -->
+            <path d="M720,50 A16,16 0 1,0 736,76 A20,20 0 1,1 720,50 Z" fill="#FFEAA7"/>
+          </g>
+
+          <!-- Campus Trees Silhouettes -->
+          <g fill="#020B06">
+            <path d="M-20,380 Q20,180 70,380 Z"/>
+            <path d="M60,380 Q110,210 160,380 Z"/>
+            <path d="M660,380 Q710,200 760,380 Z"/>
+            <path d="M740,380 Q790,220 840,380 Z"/>
+          </g>
+
+          <!-- Campus Walkway Pavement -->
+          <polygon points="0,400 800,400 800,500 0,500" fill="#0A180E"/>
+          <g stroke="#162E1C" stroke-width="2" opacity="0.4">
+            <line x1="0" y1="440" x2="800" y2="440"/>
+            <line x1="100" y1="400" x2="60" y2="500"/>
+            <line x1="250" y1="400" x2="220" y2="500"/>
+            <line x1="400" y1="400" x2="390" y2="500"/>
+            <line x1="550" y1="400" x2="560" y2="500"/>
+            <line x1="700" y1="400" x2="730" y2="500"/>
+          </g>
+
+          <!-- ==============================================
+               LEFT HALF: OLD CAMERA (Single weak LED light)
+               ============================================== -->
+          <g class="left-comparison">
+            <!-- Label Badge -->
+            <rect x="80" y="40" width="160" height="26" rx="13" fill="#1B261E" stroke="#374151" stroke-width="1.5"/>
+            <text x="100" y="57" fill="#9CA3AF" font-size="11" font-family="'Fredoka', sans-serif">1 Tiny LED • Narrow</text>
+
+            <!-- Old Camera Mount Pole -->
+            <rect x="180" y="70" width="10" height="70" fill="#374151"/>
+            <rect x="170" y="130" width="45" height="24" rx="4" fill="#4B5563"/>
+            <!-- Single Tiny Weak LED -->
+            <circle cx="174" cy="142" r="3" fill="#FEF08A"/>
+            
+            <!-- Weak Dim Light Cone (Narrow, barely illuminates) -->
+            <polygon points="174,142 90,360 210,360" fill="url(#dimConeGrad)" class="weak-cone"/>
+
+            <!-- Student in the dark (Barely visible murky shadow silhouette) -->
+            <g class="student-in-dark" transform="translate(130, 270)">
+              <ellipse cx="20" cy="115" rx="16" ry="5" fill="rgba(0,0,0,0.5)"/>
+              <!-- Dim Silhouette Body -->
+              <path d="M10,60 Q20,50 30,60 L32,110 L8,110 Z" fill="#0E1E14"/>
+              <circle cx="20" cy="38" r="14" fill="#14261B"/>
+              <!-- Confused/Squinting eyes -->
+              <text x="15" y="24" fill="#6B7280" font-size="12">?</text>
+            </g>
+          </g>
+
+          <!-- Dividing Center Line -->
+          <line x1="400" y1="40" x2="400" y2="440" stroke="#2ED573" stroke-width="2" stroke-dasharray="8 6" opacity="0.4"/>
+          <circle cx="400" cy="240" r="18" fill="#082214" stroke="#2ED573" stroke-width="2"/>
+          <text x="394" y="245" fill="#2ED573" font-size="13" font-family="'Outfit', sans-serif" font-weight="bold">VS</text>
+
+          <!-- ==============================================
+               RIGHT HALF: MODIFIED CAMERA (Ring of 8 bright LEDs)
+               ============================================== -->
+          <g class="right-comparison">
+            <!-- Label Badge -->
+            <rect x="560" y="40" width="170" height="26" rx="13" fill="#0C341D" stroke="#2ED573" stroke-width="1.5"/>
+            <text x="578" y="57" fill="#2ED573" font-size="11" font-family="'Fredoka', sans-serif" font-weight="bold">Ring LED Array • Wide</text>
+
+            <!-- Modified Smart Camera -->
+            <g class="smart-led-camera" transform="translate(580, 80)">
+              <!-- Mount -->
+              <rect x="35" y="0" width="12" height="40" fill="#E2E8F0"/>
+              <!-- Camera Cylindrical Body -->
+              <rect x="15" y="35" width="52" height="44" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+              <!-- Central Lens -->
+              <circle cx="41" cy="57" r="12" fill="#0A192F"/>
+              <circle cx="41" cy="57" r="6" fill="#00D2D3"/>
+
+              <!-- Ring of 8 Bright LEDs around Lens (Pulsing Ultra Bright!) -->
+              <g class="led-ring" filter="url(#ledGlowFilter)">
+                <circle cx="41" cy="35" r="4" fill="#FFFFFF" class="ring-led"/>
+                <circle cx="56" cy="41" r="4" fill="#FFFFFF" class="ring-led"/>
+                <circle cx="63" cy="57" r="4" fill="#FFFFFF" class="ring-led"/>
+                <circle cx="56" cy="73" r="4" fill="#FFFFFF" class="ring-led"/>
+                <circle cx="41" cy="79" r="4" fill="#FFFFFF" class="ring-led"/>
+                <circle cx="26" cy="73" r="4" fill="#FFFFFF" class="ring-led"/>
+                <circle cx="19" cy="57" r="4" fill="#FFFFFF" class="ring-led"/>
+                <circle cx="26" cy="41" r="4" fill="#FFFFFF" class="ring-led"/>
+              </g>
+
+              <!-- Huge Wide Luminous Cone Flooding Walkway -->
+              <polygon points="41,75 140,360 480,360" fill="url(#brightConeGrad)" class="bright-wide-cone" transform="translate(-250, 0)"/>
+            </g>
+
+            <!-- Student Leo Walking along brightly illuminated path! -->
+            <g class="student-bright-walk interactive-char" transform="translate(560, 240)" data-tooltip="Leo: So bright and safe!" tabindex="0" role="button" aria-label="Student Leo walking">
+              <ellipse cx="40" cy="150" rx="26" ry="8" fill="rgba(46,213,115,0.25)"/>
+
+              <!-- Walking Legs -->
+              <g class="walking-legs">
+                <line x1="32" y1="120" x2="22" y2="148" stroke="#1E293B" stroke-width="7" stroke-linecap="round"/>
+                <line x1="48" y1="120" x2="58" y2="146" stroke="#1E293B" stroke-width="7" stroke-linecap="round"/>
+              </g>
+
+              <!-- Body: Emerald Green Jacket in full vivid color -->
+              <path d="M22,70 Q40,60 58,70 L62,122 L18,122 Z" fill="#2ED573" stroke="#FFFFFF" stroke-width="1.5"/>
+              <!-- Blue Backpack on back -->
+              <rect x="10" y="74" width="14" height="28" rx="5" fill="#3B82F6"/>
+              
+              <!-- Head -->
+              <circle cx="40" cy="44" r="18" fill="#FAD0C4"/>
+              <path d="M24,34 Q40,20 56,34 Z" fill="#5D4037"/> <!-- Hair -->
+              <!-- Round Glasses & Happy Eyes -->
+              <circle cx="34" cy="44" r="5" fill="none" stroke="#1E293B" stroke-width="1.5"/>
+              <circle cx="46" cy="44" r="5" fill="none" stroke="#1E293B" stroke-width="1.5"/>
+              <circle cx="34" cy="44" r="2.5" fill="#1E293B"/>
+              <circle cx="46" cy="44" r="2.5" fill="#1E293B"/>
+              <!-- Big Smile -->
+              <path d="M36,53 Q40,59 44,53" stroke="#1E293B" stroke-width="2" fill="none"/>
+              <circle cx="28" cy="48" r="3" fill="#FF8A80" opacity="0.6"/> <!-- Blush -->
+              <circle cx="52" cy="48" r="3" fill="#FF8A80" opacity="0.6"/>
+
+              <!-- Waving Hand -->
+              <path d="M58,78 Q74,68 76,52" stroke="#2ED573" stroke-width="6" stroke-linecap="round" fill="none" class="leo-wave-arm"/>
+              <circle cx="76" cy="50" r="5" fill="#FAD0C4"/>
+              <!-- Sparkles -->
+              <path d="M78,38 L80,30 L82,38 L90,40 L82,42 L80,50 L78,42 L70,40 Z" fill="#FFD700" class="bright-sparkle"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <div class="scene-actions">
+        <button class="scene-replay-btn" data-target="scene-m">Replay Action ↺</button>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SCENE 5: P - PUT TO ANOTHER USE (Blue: #1E90FF)
+         Campus Gate: Student with bag walks through gate under dome camera.
+         Red beam scans, metal object in pocket gets red box & beep ripple effect.
+         =================================================================== -->
+    <section class="scene-section scene-p" id="scene-p" data-letter="P">
+      <div class="scene-header">
+        <div class="scene-badge badge-p">P</div>
+        <h2 class="scene-title">Gate Metal Scanner</h2>
+      </div>
+
+      <div class="scene-stage">
+        <svg viewBox="0 0 800 500" class="scene-svg" id="svg-scene-p" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <linearGradient id="gateSkyGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#05152B"/>
+              <stop offset="60%" stop-color="#0E2B52"/>
+              <stop offset="100%" stop-color="#071932"/>
+            </linearGradient>
+            <linearGradient id="brickGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#80352A"/>
+              <stop offset="100%" stop-color="#9E4336"/>
+            </linearGradient>
+            <linearGradient id="scanBeamGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#FF3838" stop-opacity="0.8"/>
+              <stop offset="50%" stop-color="#FF4757" stop-opacity="0.35"/>
+              <stop offset="100%" stop-color="#FF3838" stop-opacity="0.05"/>
+            </linearGradient>
+            <filter id="sonarPingGlow" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="4" result="blur"/>
+              <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+            </filter>
+          </defs>
+
+          <!-- Sky Background -->
+          <rect x="0" y="0" width="800" height="500" fill="url(#gateSkyGrad)"/>
+          <!-- Ground Pavement -->
+          <rect x="0" y="380" width="800" height="120" fill="#0B1A2F"/>
+          <line x1="0" y1="380" x2="800" y2="380" stroke="#1E90FF" stroke-width="2" opacity="0.4"/>
+
+          <!-- Campus Grand Entrance Gate Archway -->
+          <!-- Left Brick Pillar -->
+          <rect x="140" y="80" width="80" height="300" fill="url(#brickGrad)" stroke="#5C251D" stroke-width="2"/>
+          <rect x="130" y="65" width="100" height="15" rx="3" fill="#D1D5DB"/>
+          <g fill="#61241C" opacity="0.3">
+            <rect x="145" y="110" width="30" height="12"/>
+            <rect x="185" y="130" width="30" height="12"/>
+            <rect x="145" y="160" width="30" height="12"/>
+            <rect x="185" y="190" width="30" height="12"/>
+          </g>
+
+          <!-- Right Brick Pillar -->
+          <rect x="580" y="80" width="80" height="300" fill="url(#brickGrad)" stroke="#5C251D" stroke-width="2"/>
+          <rect x="570" y="65" width="100" height="15" rx="3" fill="#D1D5DB"/>
+          <g fill="#61241C" opacity="0.3">
+            <rect x="585" y="110" width="30" height="12"/>
+            <rect x="625" y="130" width="30" height="12"/>
+            <rect x="585" y="160" width="30" height="12"/>
+            <rect x="625" y="190" width="30" height="12"/>
+          </g>
+
+          <!-- Top Cross Arch / Beam -->
+          <path d="M220,95 L580,95 L580,65 L220,65 Z" fill="#D1D5DB" stroke="#9CA3AF" stroke-width="2"/>
+          <rect x="260" y="35" width="280" height="32" rx="6" fill="#1E3A8A"/>
+          <text x="310" y="57" fill="#FFFFFF" font-size="14" font-family="'Fredoka', sans-serif" font-weight="bold" letter-spacing="2">CAMPUS MAIN GATE</text>
+
+          <!-- Gate Turnstile / Barrier Arm -->
+          <rect x="220" y="320" width="24" height="60" rx="4" fill="#4B5563"/>
+          <rect x="556" y="320" width="24" height="60" rx="4" fill="#4B5563"/>
+          <!-- Turnstile Flashing Warning Beacon -->
+          <circle cx="232" cy="312" r="6" fill="#FF4757" class="gate-warning-light" filter="url(#sonarPingGlow)"/>
+
+          <!-- High-Tech Dome Camera Mounted Under Archway -->
+          <g class="gate-dome-camera" transform="translate(370, 95)">
+            <!-- Ceiling Plate -->
+            <rect x="0" y="0" width="60" height="10" rx="2" fill="#E2E8F0"/>
+            <!-- Transparent Smoked Dome Housing -->
+            <path d="M6,10 Q30,48 54,10 Z" fill="#1E293B" stroke="#CBD5E1" stroke-width="2"/>
+            <!-- Internal Gimbal Camera Eye -->
+            <circle cx="30" cy="22" r="10" fill="#0F172A"/>
+            <circle cx="30" cy="24" r="5" fill="#FF3838" class="dome-ir-eye" filter="url(#sonarPingGlow)"/>
+            <circle cx="32" cy="22" r="1.5" fill="#FFFFFF"/>
+          </g>
+
+          <!-- Vertical Red Holographic Scanning Curtain sweeping down -->
+          <g class="hologram-scan-curtain">
+            <polygon points="400,125 320,380 480,380" fill="url(#scanBeamGrad)" class="scan-plane"/>
+            <!-- Horizontal Scan Line moving vertically -->
+            <line x1="330" y1="280" x2="470" y2="280" stroke="#FF4757" stroke-width="3" filter="url(#sonarPingGlow)" class="moving-scan-line"/>
+          </g>
+
+          <!-- Student Walking Through Gate with Bag (Mia / Sam) -->
+          <g class="student-walking-gate interactive-char" transform="translate(360, 210)" data-tooltip="Student: Just walking to class..." tabindex="0" role="button" aria-label="Student walking through gate">
+            <ellipse cx="40" cy="170" rx="28" ry="8" fill="rgba(0,0,0,0.3)"/>
+
+            <!-- Legs Walking -->
+            <line x1="30" y1="130" x2="20" y2="168" stroke="#1E293B" stroke-width="7" stroke-linecap="round"/>
+            <line x1="48" y1="130" x2="58" y2="166" stroke="#1E293B" stroke-width="7" stroke-linecap="round"/>
+
+            <!-- Torso: Jacket & Backpack -->
+            <path d="M22,70 Q40,60 58,70 L62,132 L18,132 Z" fill="#3B82F6"/>
+            <!-- Large Backpack on shoulder -->
+            <rect x="8" y="74" width="18" height="38" rx="6" fill="#F97316"/>
+
+            <!-- Head -->
+            <circle cx="40" cy="44" r="18" fill="#FAD0C4"/>
+            <path d="M26,34 Q40,20 54,34 Z" fill="#4B2E18"/>
+            <circle cx="36" cy="44" r="2.5" fill="#1E293B"/>
+            <circle cx="46" cy="44" r="2.5" fill="#1E293B"/>
+            <path d="M38,52 Q41,56 44,52" stroke="#1E293B" stroke-width="1.5" fill="none"/>
+
+            <!-- ==============================================
+                 CONTRABAND / METAL OBJECT IN POCKET / BAG
+                 ============================================== -->
+            <g class="metal-detection-target" transform="translate(44, 98)" filter="url(#sonarPingGlow)">
+              <!-- Prohibited Metal Tool / Compass Silhouette Inside Pocket -->
+              <path d="M4,2 L14,16 M14,2 L4,16" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+
+              <!-- Pulsating Red Target Bounding Box -->
+              <rect x="-4" y="-4" width="26" height="26" rx="4" fill="none" stroke="#FF3838" stroke-width="2.5" stroke-dasharray="6 3" class="metal-red-box"/>
+              <path d="M-8,-8 L-2,-8 M-8,-8 L-8,-2" stroke="#FF3838" stroke-width="3"/>
+              <path d="M26,-8 L20,-8 M26,-8 L26,-2" stroke="#FF3838" stroke-width="3"/>
+              <path d="M-8,26 L-2,26 M-8,26 L-8,20" stroke="#FF3838" stroke-width="3"/>
+              <path d="M26,26 L20,26 M26,26 L26,20" stroke="#FF3838" stroke-width="3"/>
+
+              <!-- Sonar Beep Ripple Effect Rings -->
+              <circle cx="9" cy="9" r="14" stroke="#FF3838" stroke-width="2" fill="none" class="sonar-ring r-1"/>
+              <circle cx="9" cy="9" r="24" stroke="#FF4757" stroke-width="1.5" fill="none" class="sonar-ring r-2"/>
+              <circle cx="9" cy="9" r="34" stroke="#FF6B81" stroke-width="1" fill="none" class="sonar-ring r-3"/>
+
+              <!-- Holographic Ping Text -->
+              <rect x="28" y="-2" width="60" height="18" rx="4" fill="#FF3838"/>
+              <text x="32" y="11" fill="#FFFFFF" font-size="8" font-family="'Fredoka', sans-serif" font-weight="bold">METAL BEEP!</text>
+            </g>
+          </g>
+
+          <!-- Guard Officer Dan Watching on Handheld Tablet -->
+          <g class="guard-at-gate interactive-char" transform="translate(670, 240)" data-tooltip="Officer Dan: Screen shows metal alert!" tabindex="0" role="button" aria-label="Security Guard watching tablet">
+            <ellipse cx="25" cy="140" rx="20" ry="6" fill="rgba(0,0,0,0.3)"/>
+            <!-- Body -->
+            <path d="M10,65 Q25,55 40,65 L44,135 L6,135 Z" fill="#1E3799"/>
+            <circle cx="25" cy="40" r="16" fill="#FAD0C4"/>
+            <!-- Mustache -->
+            <path d="M20,47 Q25,52 30,47" stroke="#4A342B" stroke-width="2" fill="none"/>
+            <!-- Cap -->
+            <ellipse cx="25" cy="28" rx="18" ry="7" fill="#1E3799"/>
+            <path d="M12,26 Q25,18 38,26 L40,32 L10,32 Z" fill="#1E3799"/>
+            <!-- Tablet with Red Warning -->
+            <rect x="-8" y="75" width="28" height="20" rx="3" fill="#1E293B" stroke="#64748B" stroke-width="1.5"/>
+            <rect x="-5" y="78" width="22" height="14" rx="2" fill="#FF3838"/>
+            <circle cx="6" cy="85" r="3" fill="#FFFFFF"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="scene-actions">
+        <button class="scene-replay-btn" data-target="scene-p">Replay Action ↺</button>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SCENE 6: E - ELIMINATE (Purple: #8854D0)
+         IT Room: Two cables (power and data) go from camera to switch.
+         Power cable gets cut and fades away.
+         One cable remains with glowing dots moving through it (power & data together).
+         =================================================================== -->
+    <section class="scene-section scene-e" id="scene-e" data-letter="E">
+      <div class="scene-header">
+        <div class="scene-badge badge-e">E</div>
+        <h2 class="scene-title">One Cable Setup</h2>
+      </div>
+
+      <div class="scene-stage">
+        <svg viewBox="0 0 800 500" class="scene-svg" id="svg-scene-e" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <linearGradient id="itRoomGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#190B2E"/>
+              <stop offset="60%" stop-color="#28114A"/>
+              <stop offset="100%" stop-color="#120622"/>
+            </linearGradient>
+            <linearGradient id="rackGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#1E1E2E"/>
+              <stop offset="100%" stop-color="#313244"/>
+            </linearGradient>
+            <filter id="poeEnergyGlow" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="4" result="blur"/>
+              <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+            </filter>
+          </defs>
+
+          <!-- IT Server Room Background Wall -->
+          <rect x="0" y="0" width="800" height="500" fill="url(#itRoomGrad)"/>
+          <line x1="0" y1="380" x2="800" y2="380" stroke="#8854D0" stroke-width="2" opacity="0.4"/>
+          <rect x="0" y="380" width="800" height="120" fill="#0D0418"/>
+
+          <!-- 19-inch Server Rack Cabinet on Right -->
+          <rect x="520" y="60" width="200" height="340" rx="10" fill="url(#rackGrad)" stroke="#45475A" stroke-width="3"/>
+          <rect x="540" y="80" width="160" height="300" rx="6" fill="#11111B"/>
+
+          <!-- Rack Switch Units with Blinking LEDs -->
+          <!-- Unit 1: Patch Panel -->
+          <rect x="550" y="95" width="140" height="35" rx="4" fill="#181825" stroke="#313244" stroke-width="1.5"/>
+          <g fill="#A6ADC8" font-size="7" font-family="monospace">
+            <text x="560" y="108">CAT6A PATCH</text>
+            <!-- 8 RJ45 Ports -->
+            <rect x="560" y="114" width="10" height="10" rx="2" fill="#313244"/>
+            <rect x="575" y="114" width="10" height="10" rx="2" fill="#313244"/>
+            <rect x="590" y="114" width="10" height="10" rx="2" fill="#313244"/>
+            <rect x="605" y="114" width="10" height="10" rx="2" fill="#313244"/>
+            <rect x="620" y="114" width="10" height="10" rx="2" fill="#313244"/>
+            <rect x="635" y="114" width="10" height="10" rx="2" fill="#313244"/>
+            <rect x="650" y="114" width="10" height="10" rx="2" fill="#313244"/>
+            <rect x="665" y="114" width="10" height="10" rx="2" fill="#313244"/>
+          </g>
+
+          <!-- Unit 2: Power over Ethernet Network Gigabit Switch -->
+          <rect x="550" y="145" width="140" height="45" rx="4" fill="#1E1E2E" stroke="#8854D0" stroke-width="2"/>
+          <text x="560" y="160" fill="#CBA6F7" font-size="9" font-family="'Fredoka', sans-serif" font-weight="bold">NETWORK SWITCH</text>
+          <!-- Status Blinking LEDs -->
+          <circle cx="565" cy="175" r="3" fill="#2ED573" class="switch-led s-l1"/>
+          <circle cx="575" cy="175" r="3" fill="#2ED573" class="switch-led s-l2"/>
+          <circle cx="585" cy="175" r="3" fill="#FFA502" class="switch-led s-l3"/>
+          <circle cx="595" cy="175" r="3" fill="#2ED573" class="switch-led s-l4"/>
+          <!-- Active Power over Ethernet Port -->
+          <rect x="615" y="166" width="16" height="14" rx="2" fill="#8854D0" filter="url(#poeEnergyGlow)"/>
+          <text x="638" y="177" fill="#8854D0" font-size="8" font-family="monospace">PORT 01</text>
+
+          <!-- Unit 3 & 4: Servers -->
+          <rect x="550" y="205" width="140" height="40" rx="4" fill="#181825"/>
+          <circle cx="565" cy="225" r="4" fill="#89B4FA"/>
+          <line x1="580" y1="225" x2="670" y2="225" stroke="#313244" stroke-width="4" stroke-dasharray="8 4"/>
+
+          <rect x="550" y="260" width="140" height="40" rx="4" fill="#181825"/>
+          <circle cx="565" cy="280" r="4" fill="#A6E3A1"/>
+          <line x1="580" y1="280" x2="670" y2="280" stroke="#313244" stroke-width="4" stroke-dasharray="8 4"/>
+
+          <!-- Campus Camera Mounted on Left Wall -->
+          <g class="poe-camera-mount" transform="translate(100, 150)">
+            <rect x="0" y="0" width="16" height="50" rx="3" fill="#45475A"/>
+            <path d="M16,25 L45,25 L45,35" stroke="#585B70" stroke-width="8" stroke-linecap="round" fill="none"/>
+            <!-- Camera Body -->
+            <rect x="35" y="25" width="65" height="38" rx="8" fill="#FFFFFF" stroke="#BAC2DE" stroke-width="2"/>
+            <circle cx="95" cy="44" r="10" fill="#11111B"/>
+            <circle cx="95" cy="44" r="5" fill="#8854D0" class="cam-poe-eye"/>
+            <circle cx="97" cy="42" r="1.5" fill="#FFFFFF"/>
+            <!-- Power & Data Ports at back of camera -->
+            <rect x="27" y="30" width="10" height="8" rx="2" fill="#F38BA8"/> <!-- Old Power Socket -->
+            <rect x="27" y="44" width="10" height="8" rx="2" fill="#8854D0"/> <!-- Power over Ethernet RJ45 Socket -->
+            <!-- Power over Ethernet Active Badge on Camera -->
+            <rect x="42" y="30" width="40" height="12" rx="3" fill="#8854D0"/>
+            <text x="46" y="39" fill="#FFFFFF" font-size="7" font-weight="bold" font-family="'Fredoka', sans-serif">1 CABLE</text>
+          </g>
+
+          <!-- ==============================================
+               CABLES CONNECTING CAMERA TO SWITCH
+               ============================================== -->
+          
+          <!-- CABLE 1: CHUNKY BULKY POWER CABLE (GETS CUT & DISSOLVES!) -->
+          <g class="power-cable-group">
+            <!-- Left Half (To Camera) -->
+            <path d="M127,184 Q220,120 310,175" stroke="#F59E0B" stroke-width="7" stroke-linecap="round" fill="none" class="power-cable-l"/>
+            <!-- Right Half (To Wall Socket) -->
+            <path d="M330,185 Q420,240 500,260" stroke="#F59E0B" stroke-width="7" stroke-linecap="round" fill="none" class="power-cable-r"/>
+            <!-- Hazard Stripes on Power Cable -->
+            <path d="M130,184 Q220,120 310,175" stroke="#111827" stroke-width="7" stroke-dasharray="10 10" fill="none" class="power-cable-stripes"/>
+            
+            <!-- Power Label Tag -->
+            <g class="power-label-tag" transform="translate(200, 130)">
+              <rect x="0" y="0" width="62" height="18" rx="4" fill="#F59E0B"/>
+              <text x="6" y="13" fill="#111827" font-size="9" font-family="'Fredoka', sans-serif" font-weight="bold">⚡ POWER 230V</text>
+            </g>
+
+            <!-- Cartoon Scissors Cutting the Power Cable -->
+            <g class="scissors-cut-unit" transform="translate(300, 145)">
+              <g class="scissors-blades">
+                <path d="M-10,-15 L20,10" stroke="#E2E8F0" stroke-width="5" stroke-linecap="round"/>
+                <path d="M-10,25 L20,0" stroke="#E2E8F0" stroke-width="5" stroke-linecap="round"/>
+                <!-- Scissor Handles (Red) -->
+                <circle cx="-16" cy="-20" r="8" fill="none" stroke="#EF4444" stroke-width="4"/>
+                <circle cx="-16" cy="30" r="8" fill="none" stroke="#EF4444" stroke-width="4"/>
+                <circle cx="8" cy="5" r="3" fill="#475569"/>
+              </g>
+              <!-- SNIP sound / spark effect -->
+              <g class="snip-sparks">
+                <path d="M18,-5 L28,-12 M22,5 L32,5 M18,15 L28,22" stroke="#FFD700" stroke-width="2.5" stroke-linecap="round"/>
+                <text x="25" y="-16" fill="#FFD700" font-size="12" font-family="'Outfit', sans-serif" font-weight="900">SNIP!</text>
+              </g>
+            </g>
+
+            <!-- Poof Disappearing Sparkles when power wire fades -->
+            <g class="fade-sparkles" transform="translate(320, 180)">
+              <circle cx="-30" cy="-10" r="3" fill="#F59E0B" class="sp-dot d-1"/>
+              <circle cx="0" cy="15" r="2.5" fill="#FFEAA7" class="sp-dot d-2"/>
+              <circle cx="30" cy="-5" r="3" fill="#FFFFFF" class="sp-dot d-3"/>
+            </g>
+          </g>
+
+          <!-- CABLE 2: THE SINGLE ETHERNET CABLE (Power over Ethernet: DATA + POWER) -->
+          <g class="poe-cable-group">
+            <!-- Smooth Elegant Purple Cable -->
+            <path d="M127,198 Q320,290 622,174" stroke="#8854D0" stroke-width="8" stroke-linecap="round" fill="none" class="poe-main-wire"/>
+            <path d="M127,198 Q320,290 622,174" stroke="#CBA6F7" stroke-width="2" fill="none" opacity="0.6"/>
+
+            <!-- Glowing Moving Energy & Data Dots flowing through cable -->
+            <g class="poe-dots-stream" filter="url(#poeEnergyGlow)">
+              <circle cx="150" cy="208" r="4.5" fill="#00D2D3" class="poe-dot dot-1"/>
+              <circle cx="210" cy="230" r="4" fill="#FFD700" class="poe-dot dot-2"/>
+              <circle cx="280" cy="248" r="4.5" fill="#00D2D3" class="poe-dot dot-3"/>
+              <circle cx="360" cy="254" r="4" fill="#FFD700" class="poe-dot dot-4"/>
+              <circle cx="440" cy="242" r="4.5" fill="#00D2D3" class="poe-dot dot-5"/>
+              <circle cx="520" cy="216" r="4" fill="#FFD700" class="poe-dot dot-6"/>
+              <circle cx="590" cy="186" r="4.5" fill="#00D2D3" class="poe-dot dot-7"/>
+            </g>
+
+            <!-- Single Power over Ethernet Cable Badge -->
+            <g class="poe-badge-pill" transform="translate(320, 290)">
+              <rect x="0" y="0" width="130" height="26" rx="13" fill="#8854D0" stroke="#FFFFFF" stroke-width="1.5" filter="url(#poeEnergyGlow)"/>
+              <text x="14" y="17" fill="#FFFFFF" font-size="10" font-family="'Fredoka', sans-serif" font-weight="bold">⚡ 1 CABLE = DATA + POWER</text>
+            </g>
+          </g>
+
+          <!-- Friendly AI Mascot CamBot Celebrating the Clean Setup -->
+          <g class="cambot-it interactive-char" transform="translate(340, 360)" data-tooltip="CamBot: No messy wires!" tabindex="0" role="button" aria-label="CamBot mascot">
+            <ellipse cx="30" cy="65" rx="20" ry="6" fill="rgba(0,0,0,0.3)"/>
+            <rect x="10" y="15" width="40" height="46" rx="20" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+            <rect x="16" y="24" width="28" height="18" rx="8" fill="#0A192F"/>
+            <!-- Happy Eyes ^ ^ -->
+            <path d="M22,34 Q25,30 28,34" stroke="#00D2D3" stroke-width="2" fill="none"/>
+            <path d="M32,34 Q35,30 38,34" stroke="#00D2D3" stroke-width="2" fill="none"/>
+            <circle cx="30" cy="4" r="4" fill="#8854D0"/>
+            <line x1="30" y1="15" x2="30" y2="8" stroke="#8854D0" stroke-width="2"/>
+            <!-- Thumbs up arm -->
+            <path d="M10,38 Q-2,32 0,22" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" fill="none"/>
+            <circle cx="0" cy="20" r="3" fill="#00D2D3"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="scene-actions">
+        <button class="scene-replay-btn" data-target="scene-e">Replay Action ↺</button>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SCENE 7: R - REVERSE (Pink: #ED4C67)
+         Playground: Camera detaches from dock, flies like a drone to a student,
+         scans, and flies back to charge in the dock.
+         =================================================================== -->
+    <section class="scene-section scene-r" id="scene-r" data-letter="R">
+      <div class="scene-header">
+        <div class="scene-badge badge-r">R</div>
+        <h2 class="scene-title">Autonomous Drone Patrol</h2>
+      </div>
+
+      <div class="scene-stage">
+        <svg viewBox="0 0 800 500" class="scene-svg" id="svg-scene-r" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <linearGradient id="fieldSkyGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#2B0515"/>
+              <stop offset="60%" stop-color="#460B24"/>
+              <stop offset="100%" stop-color="#1B040E"/>
+            </linearGradient>
+            <linearGradient id="grassGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#15803D"/>
+              <stop offset="100%" stop-color="#0F5127"/>
+            </linearGradient>
+            <radialGradient id="droneScanRay" cx="50%" cy="0%" r="100%">
+              <stop offset="0%" stop-color="#FF3838" stop-opacity="0.5"/>
+              <stop offset="100%" stop-color="#FF3838" stop-opacity="0"/>
+            </radialGradient>
+            <filter id="chargeGlow" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="4" result="blur"/>
+              <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+            </filter>
+          </defs>
+
+          <!-- Sky Background -->
+          <rect x="0" y="0" width="800" height="500" fill="url(#fieldSkyGrad)"/>
+          
+          <!-- Running Track in Background -->
+          <ellipse cx="400" cy="380" rx="440" ry="100" fill="#991B1B" opacity="0.3"/>
+          <ellipse cx="400" cy="380" rx="420" ry="90" fill="#7F1D1D" opacity="0.2"/>
+          <line x1="0" y1="365" x2="800" y2="365" stroke="#FFFFFF" stroke-width="1.5" stroke-dasharray="8 6" opacity="0.4"/>
+
+          <!-- Campus Sports Field Grass Pitch -->
+          <rect x="0" y="370" width="800" height="130" fill="url(#grassGrad)"/>
+          <line x1="0" y1="370" x2="800" y2="370" stroke="#FFFFFF" stroke-width="2" opacity="0.6"/>
+
+          <!-- Soccer Goal Post on Right -->
+          <g transform="translate(680, 280)">
+            <rect x="0" y="0" width="6" height="90" fill="#FFFFFF"/>
+            <rect x="60" y="0" width="6" height="90" fill="#FFFFFF"/>
+            <rect x="0" y="0" width="66" height="6" fill="#FFFFFF"/>
+            <!-- Net grid -->
+            <path d="M0,0 L20,-20 L86,-20 L66,0 M20,-20 L20,70 L0,90 M86,-20 L86,70 L66,90" stroke="#E2E8F0" stroke-width="1" fill="none" opacity="0.4"/>
+            <!-- Soccer Ball on Grass -->
+            <circle cx="-25" cy="85" r="9" fill="#FFFFFF" stroke="#1E293B" stroke-width="1.5"/>
+            <circle cx="-25" cy="85" r="3" fill="#1E293B"/>
+          </g>
+
+          <!-- Docking Station on Left Pole -->
+          <g class="dock-station-unit" transform="translate(100, 100)">
+            <!-- Dock Mast Pole -->
+            <rect x="25" y="40" width="10" height="260" fill="#475569"/>
+            <!-- Charging Pad Bracket -->
+            <rect x="10" y="35" width="40" height="14" rx="4" fill="#334155"/>
+            <ellipse cx="30" cy="42" rx="28" ry="8" fill="#1E293B" stroke="#ED4C67" stroke-width="2"/>
+            
+            <!-- Magnetic Charging Pins -->
+            <circle cx="20" cy="42" r="3" fill="#FFD700"/>
+            <circle cx="40" cy="42" r="3" fill="#FFD700"/>
+
+            <!-- Battery Charging Display Badge -->
+            <g class="dock-charge-badge" filter="url(#chargeGlow)" transform="translate(-10, -20)">
+              <rect x="0" y="0" width="80" height="24" rx="6" fill="#14040A" stroke="#2ED573" stroke-width="1.5"/>
+              <text x="8" y="16" fill="#2ED573" font-size="10" font-family="'Fredoka', sans-serif" font-weight="bold">⚡ 100% CHARGE</text>
+            </g>
+          </g>
+
+          <!-- Flight Path Guide Trajectory Curve -->
+          <path d="M130,135 Q400,60 540,240 Q450,290 130,142" stroke="#ED4C67" stroke-width="2" stroke-dasharray="6 6" fill="none" opacity="0.35" class="drone-trajectory"/>
+
+          <!-- Student on Playground (Sam kicking soccer ball) -->
+          <g class="student-sports interactive-char" transform="translate(520, 240)" data-tooltip="Sam: Hey AeroCam, safety check!" tabindex="0" role="button" aria-label="Student Sam on sports field">
+            <ellipse cx="35" cy="140" rx="22" ry="6" fill="rgba(0,0,0,0.3)"/>
+            
+            <!-- Athletic Running Pose -->
+            <line x1="28" y1="105" x2="16" y2="138" stroke="#1E293B" stroke-width="6" stroke-linecap="round"/>
+            <line x1="42" y1="105" x2="56" y2="132" stroke="#1E293B" stroke-width="6" stroke-linecap="round"/>
+
+            <!-- Athletic Blue Shirt & Shorts -->
+            <path d="M18,55 Q35,45 52,55 L54,105 L16,105 Z" fill="#3B82F6"/>
+            <!-- Head -->
+            <circle cx="35" cy="35" r="16" fill="#FAD0C4"/>
+            <!-- Yellow Cap Turned Backward -->
+            <path d="M22,30 Q35,16 48,30 L52,34 L18,34 Z" fill="#FFA502"/>
+            <circle cx="35" cy="18" r="3" fill="#FF4757"/>
+            <circle cx="31" cy="35" r="2.5" fill="#1E293B"/>
+            <circle cx="41" cy="35" r="2.5" fill="#1E293B"/>
+            <path d="M32,42 Q36,46 40,42" stroke="#1E293B" stroke-width="1.5" fill="none"/>
+            <!-- Waving Arm to Drone -->
+            <path d="M52,65 Q68,52 65,36" stroke="#3B82F6" stroke-width="5" stroke-linecap="round" fill="none"/>
+            <circle cx="65" cy="34" r="4" fill="#FAD0C4"/>
+          </g>
+
+          <!-- ==============================================
+               THE FLYING DRONE CAMERA ("AeroCam")
+               Detaches from dock -> flies over field -> scans student -> flies back!
+               ============================================== -->
+          <g class="flying-aerocam-unit" id="flyingAeroCam">
+            <!-- Downward Friendly Scan Beam (Active during student hover) -->
+            <polygon points="0,20 -45,150 45,150" fill="url(#droneScanRay)" class="drone-down-scan"/>
+            
+            <!-- Drone Center Pod & Gimbal Camera Eye -->
+            <circle cx="0" cy="0" r="18" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+            <circle cx="0" cy="4" r="10" fill="#0F172A"/>
+            <circle cx="0" cy="4" r="5" fill="#ED4C67" class="drone-lens-glow"/>
+            <circle cx="2" cy="2" r="1.5" fill="#FFFFFF"/>
+
+            <!-- Navigation Blinking LEDs -->
+            <circle cx="-16" cy="0" r="2.5" fill="#EF4444" class="nav-led n-red"/>
+            <circle cx="16" cy="0" r="2.5" fill="#22C55E" class="nav-led n-green"/>
+
+            <!-- 4 Quadcopter Rotor Arms & Spinning Propellers -->
+            <!-- Arm Top-Left -->
+            <line x1="-12" y1="-10" x2="-26" y2="-22" stroke="#64748B" stroke-width="3" stroke-linecap="round"/>
+            <ellipse cx="-28" cy="-24" rx="14" ry="4" fill="rgba(255,255,255,0.6)" class="propeller prop-tl"/>
+            <circle cx="-28" cy="-24" r="2.5" fill="#1E293B"/>
+
+            <!-- Arm Top-Right -->
+            <line x1="12" y1="-10" x2="26" y2="-22" stroke="#64748B" stroke-width="3" stroke-linecap="round"/>
+            <ellipse cx="28" cy="-24" rx="14" ry="4" fill="rgba(255,255,255,0.6)" class="propeller prop-tr"/>
+            <circle cx="28" cy="-24" r="2.5" fill="#1E293B"/>
+
+            <!-- Arm Bottom-Left -->
+            <line x1="-12" y1="10" x2="-26" y2="22" stroke="#64748B" stroke-width="3" stroke-linecap="round"/>
+            <ellipse cx="-28" cy="24" rx="14" ry="4" fill="rgba(255,255,255,0.6)" class="propeller prop-bl"/>
+            <circle cx="-28" cy="24" r="2.5" fill="#1E293B"/>
+
+            <!-- Arm Bottom-Right -->
+            <line x1="12" y1="10" x2="26" y2="22" stroke="#64748B" stroke-width="3" stroke-linecap="round"/>
+            <ellipse cx="28" cy="24" rx="14" ry="4" fill="rgba(255,255,255,0.6)" class="propeller prop-br"/>
+            <circle cx="28" cy="24" r="2.5" fill="#1E293B"/>
+
+            <!-- Mini Antenna with Pink Glow -->
+            <line x1="0" y1="-18" x2="0" y2="-28" stroke="#ED4C67" stroke-width="2"/>
+            <circle cx="0" cy="-30" r="3" fill="#ED4C67"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="scene-actions">
+        <button class="scene-replay-btn" data-target="scene-r">Replay Action ↺</button>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         CLOSING SCREEN: "One camera. Seven smart ideas."
+         ========================================== -->
+    <section class="screen outro-screen" id="outro">
+      <div class="outro-container">
+        <div class="outro-badge-pill">SCAMPER COMPLETE</div>
+        <h2 class="outro-title">One camera. Seven smart ideas.</h2>
+        
+        <!-- Interactive Group Celebration of all characters -->
+        <div class="celebration-cast" id="celebrationCast">
+          <!-- All Characters Gathered Together Vector Stage -->
+          <svg viewBox="0 0 700 240" class="celebration-svg" preserveAspectRatio="xMidYMid meet">
+            <defs>
+              <filter id="confettiGlow" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="2" result="blur"/>
+                <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+              </filter>
+            </defs>
+            <!-- Ground Podium -->
+            <ellipse cx="350" cy="210" rx="320" ry="24" fill="rgba(0,0,0,0.25)"/>
+
+            <!-- Character 1: Security Guard Dan (Thumbs Up & Smiling) -->
+            <g class="celeb-guard interactive-char" transform="translate(100, 60)" data-tooltip="Officer Dan: Safe campus achieved!" tabindex="0" role="button" aria-label="Security Guard Dan">
+              <ellipse cx="30" cy="140" rx="22" ry="6" fill="rgba(0,0,0,0.2)"/>
+              <path d="M12,65 Q30,55 48,65 L52,135 L8,135 Z" fill="#1E3799"/>
+              <circle cx="30" cy="38" r="16" fill="#FAD0C4"/>
+              <path d="M24,45 Q30,50 36,45" stroke="#4A342B" stroke-width="2.5" fill="none"/>
+              <ellipse cx="30" cy="26" rx="18" ry="7" fill="#1E3799"/>
+              <path d="M16,24 Q30,16 44,24 L46,30 L14,30 Z" fill="#1E3799"/>
+              <circle cx="30" cy="22" r="3" fill="#FFD700"/>
+              <!-- Thumbs up -->
+              <path d="M48,80 Q64,70 62,56" stroke="#1E3799" stroke-width="6" stroke-linecap="round" fill="none"/>
+              <circle cx="62" cy="54" r="5" fill="#FAD0C4"/>
+            </g>
+
+            <!-- Character 2: Mia (Cheering with arms up) -->
+            <g class="celeb-mia interactive-char" transform="translate(190, 75)" data-tooltip="Mia: Attendance is automatic!" tabindex="0" role="button" aria-label="Student Mia">
+              <ellipse cx="25" cy="125" rx="18" ry="5" fill="rgba(0,0,0,0.2)"/>
+              <path d="M10,50 Q25,42 40,50 L42,120 L8,120 Z" fill="#FF7F50"/>
+              <circle cx="25" cy="28" r="14" fill="#FAD0C4"/>
+              <path d="M14,20 Q4,16 6,6 Q18,10 22,20 Z" fill="#4A2E18"/>
+              <!-- Cheerful eyes -->
+              <path d="M19,28 Q22,25 25,28" stroke="#1E293B" stroke-width="2" fill="none"/>
+              <path d="M27,28 Q30,25 33,28" stroke="#1E293B" stroke-width="2" fill="none"/>
+              <!-- Hands Up in Victory -->
+              <path d="M10,52 Q-2,38 4,24" stroke="#FF7F50" stroke-width="5" stroke-linecap="round" fill="none"/>
+              <path d="M40,52 Q52,38 46,24" stroke="#FF7F50" stroke-width="5" stroke-linecap="round" fill="none"/>
+            </g>
+
+            <!-- Character 3: Friendly AI Mascot CamBot (Center Stage - Floating with Heart Eyes) -->
+            <g class="celeb-cambot interactive-char" transform="translate(290, 40)" data-tooltip="CamBot: ♥ Smart CCTV for everyone! ♥" tabindex="0" role="button" aria-label="AI Robot Mascot CamBot">
+              <ellipse cx="35" cy="160" rx="26" ry="8" fill="rgba(0,0,0,0.2)"/>
+              <rect x="10" y="30" width="50" height="58" rx="25" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+              <rect x="18" y="44" width="34" height="20" rx="8" fill="#0A192F"/>
+              <!-- Heart Eyes in Screen Visor -->
+              <path d="M24,54 C24,51 27,51 28,54 C29,51 32,51 32,54 C32,58 28,60 28,60 C28,60 24,58 24,54 Z" fill="#FF4757"/>
+              <path d="M36,54 C36,51 39,51 40,54 C41,51 44,51 44,54 C44,58 40,60 40,60 C40,60 36,58 36,54 Z" fill="#FF4757"/>
+              <!-- Antenna & Light -->
+              <line x1="35" y1="30" x2="35" y2="18" stroke="#70A1FF" stroke-width="2.5"/>
+              <circle cx="35" cy="15" r="5" fill="#00D2D3" filter="url(#confettiGlow)"/>
+              <!-- Happy waving arms -->
+              <path d="M10,56 Q-4,46 -2,34" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" fill="none"/>
+              <circle cx="-2" cy="32" r="4" fill="#00D2D3"/>
+              <path d="M60,56 Q74,46 72,34" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" fill="none"/>
+              <circle cx="72" cy="32" r="4" fill="#70A1FF"/>
+            </g>
+
+            <!-- Character 4: Drone Camera AeroCam (Hovering above with streamer) -->
+            <g class="celeb-aerocam interactive-char" transform="translate(390, 20)" data-tooltip="AeroCam: Patrolling happily!" tabindex="0" role="button" aria-label="Drone Camera AeroCam">
+              <circle cx="25" cy="20" r="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+              <circle cx="25" cy="22" r="6" fill="#0F172A"/>
+              <circle cx="25" cy="22" r="3" fill="#ED4C67"/>
+              <!-- Spinning Propellers -->
+              <ellipse cx="6" cy="6" rx="10" ry="3" fill="rgba(255,255,255,0.7)"/>
+              <ellipse cx="44" cy="6" rx="10" ry="3" fill="rgba(255,255,255,0.7)"/>
+              <ellipse cx="6" cy="34" rx="10" ry="3" fill="rgba(255,255,255,0.7)"/>
+              <ellipse cx="44" cy="34" rx="10" ry="3" fill="rgba(255,255,255,0.7)"/>
+            </g>
+
+            <!-- Character 5: Leo (Glasses, smiling with peace sign) -->
+            <g class="celeb-leo interactive-char" transform="translate(470, 75)" data-tooltip="Leo: Crystal clear night vision!" tabindex="0" role="button" aria-label="Student Leo">
+              <ellipse cx="25" cy="125" rx="18" ry="5" fill="rgba(0,0,0,0.2)"/>
+              <path d="M10,50 Q25,42 40,50 L42,120 L8,120 Z" fill="#2ED573"/>
+              <circle cx="25" cy="28" r="14" fill="#FAD0C4"/>
+              <path d="M12,22 Q25,12 38,22 Z" fill="#5D4037"/>
+              <!-- Round Glasses -->
+              <circle cx="20" cy="28" r="4" fill="none" stroke="#1E293B" stroke-width="1.5"/>
+              <circle cx="30" cy="28" r="4" fill="none" stroke="#1E293B" stroke-width="1.5"/>
+              <!-- Peace Sign Arm -->
+              <path d="M40,52 Q54,42 50,28" stroke="#2ED573" stroke-width="5" stroke-linecap="round" fill="none"/>
+              <circle cx="50" cy="26" r="4" fill="#FAD0C4"/>
+            </g>
+
+            <!-- Character 6: Sam (Beanie Cap, soccer pose) -->
+            <g class="celeb-sam interactive-char" transform="translate(560, 70)" data-tooltip="Sam: Drone camera is so cool!" tabindex="0" role="button" aria-label="Student Sam">
+              <ellipse cx="25" cy="130" rx="18" ry="5" fill="rgba(0,0,0,0.2)"/>
+              <path d="M10,52 Q25,44 40,52 L42,122 L8,122 Z" fill="#3B82F6"/>
+              <circle cx="25" cy="28" r="14" fill="#FAD0C4"/>
+              <path d="M12,24 Q25,12 38,24 L40,28 L10,28 Z" fill="#FFA502"/>
+              <!-- Waving -->
+              <path d="M40,54 Q56,42 52,30" stroke="#3B82F6" stroke-width="5" stroke-linecap="round" fill="none"/>
+              <circle cx="52" cy="28" r="4" fill="#FAD0C4"/>
+            </g>
+
+            <!-- Confetti Streamers & Stars in Air -->
+            <g class="celeb-confetti" filter="url(#confettiGlow)">
+              <circle cx="80" cy="30" r="3.5" fill="#FF4757"/>
+              <rect x="140" y="20" width="7" height="7" rx="1.5" fill="#FFA502" transform="rotate(25 143 23)"/>
+              <circle cx="230" cy="15" r="4" fill="#2ED573"/>
+              <rect x="360" y="10" width="8" height="8" rx="2" fill="#1E90FF" transform="rotate(45 364 14)"/>
+              <circle cx="450" cy="18" r="3.5" fill="#8854D0"/>
+              <rect x="530" y="22" width="7" height="7" rx="1.5" fill="#ED4C67" transform="rotate(15 533 25)"/>
+              <circle cx="630" cy="35" r="4" fill="#FFD700"/>
+            </g>
+          </svg>
+        </div>
+
+        <!-- The 7 Colorful Mini Badges in Footer Recap -->
+        <div class="scamper-summary-pills">
+          <span class="pill-badge pill-s">S: Substitute</span>
+          <span class="pill-badge pill-c">C: Combine</span>
+          <span class="pill-badge pill-a">A: Adapt</span>
+          <span class="pill-badge pill-m">M: Modify</span>
+          <span class="pill-badge pill-p">P: Put to use</span>
+          <span class="pill-badge pill-e">E: Eliminate</span>
+          <span class="pill-badge pill-r">R: Reverse</span>
+        </div>
+
+        <div class="outro-buttons">
+          <a href="#top" class="replay-journey-btn">
+            <span>Replay Campus Tour</span>
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+              <path d="M3 3v5h5"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================
+       FOOTER (Clear Ownership by Balaji)
+       ========================================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="copyright-line">Created by <strong>Balaji</strong> | &copy; 2026 Balaji. All rights reserved.</p>
+      <p class="footer-subtext">A creative visual demonstration of SCAMPER thinking applied to campus CCTV security.</p>
+    </div>
+  </footer>
+
+  <!-- Light GSAP CDN for smooth animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script>
+/**
+ * SCAMPER on CCTV: Smart Campus Camera
+ * Created by Balaji | © 2026 Balaji. All rights reserved.
+ */
+
+document.addEventListener('DOMContentLoaded', () => {
+  'use strict';
+
+  // State Management
+  const state = {
+    reducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+    activeScene: null,
+    sceneTimers: {},
+    animationsPaused: false
+  };
+
+  // ------------------------------------------------------------------------
+  // STICKY PROGRESS BAR NAVIGATION & INTERSECTION OBSERVER
+  // ------------------------------------------------------------------------
+  const navLetters = document.querySelectorAll('.scamper-nav .nav-letter');
+  const sceneSections = document.querySelectorAll('.scene-section, .screen');
+
+  const updateActiveNav = (letter) => {
+    navLetters.forEach((link) => {
+      const isTarget = link.getAttribute('data-scene') === letter?.toLowerCase();
+      link.classList.toggle('active', isTarget);
+    });
+  };
+
+  // Setup Intersection Observer for 60fps view-dependent animations
+  const observerOptions = {
+    root: null,
+    rootMargin: '-15% 0px -25% 0px',
+    threshold: 0.25
+  };
+
+  const sceneObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const section = entry.target;
+      const letter = section.getAttribute('data-letter');
+
+      if (entry.isIntersecting) {
+        section.classList.add('in-view');
+        if (letter) {
+          updateActiveNav(letter);
+          startSceneAnimation(letter);
+        }
+      } else {
+        section.classList.remove('in-view');
+        if (letter) {
+          stopSceneAnimation(letter);
+        }
+      }
+    });
+  }, observerOptions);
+
+  sceneSections.forEach((sec) => sceneObserver.observe(sec));
+
+  // Smooth scroll click handler for Nav Letters
+  navLetters.forEach((navLink) => {
+    navLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = navLink.getAttribute('href');
+      const targetEl = document.querySelector(targetId);
+      if (targetEl) {
+        targetEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    });
+  });
+
+  // ------------------------------------------------------------------------
+  // SCENE SPECIFIC ANIMATION CONTROLLERS
+  // ------------------------------------------------------------------------
+
+  function startSceneAnimation(letter) {
+    if (state.animationsPaused || state.reducedMotion) return;
+
+    switch (letter.toUpperCase()) {
+      case 'S':
+        animateSceneS();
+        break;
+      case 'C':
+        animateSceneC();
+        break;
+      case 'A':
+        animateSceneA();
+        break;
+      case 'M':
+        animateSceneM();
+        break;
+      case 'P':
+        animateSceneP();
+        break;
+      case 'E':
+        animateSceneE();
+        break;
+      case 'R':
+        animateSceneR();
+        break;
+    }
+  }
+
+  function stopSceneAnimation(letter) {
+    if (state.sceneTimers[letter]) {
+      clearTimeout(state.sceneTimers[letter]);
+      clearInterval(state.sceneTimers[letter]);
+      delete state.sceneTimers[letter];
+    }
+  }
+
+  // --- SCENE 1: S (SUBSTITUTE) ---
+  function animateSceneS() {
+    const sceneEl = document.getElementById('scene-s');
+    if (!sceneEl) return;
+
+    stopSceneAnimation('S');
+
+    function runCycle() {
+      // Step 1: Sleeping
+      sceneEl.classList.remove('state-alert');
+      sceneEl.classList.add('state-sleeping');
+
+      // Step 2: After 2.5s, Intruder detected -> Alert sent -> Guard snaps awake
+      state.sceneTimers['S'] = setTimeout(() => {
+        sceneEl.classList.remove('state-sleeping');
+        sceneEl.classList.add('state-alert');
+
+        // Loop after 4.5s
+        state.sceneTimers['S'] = setTimeout(runCycle, 4500);
+      }, 2500);
+    }
+
+    runCycle();
+  }
+
+  // --- SCENE 2: C (COMBINE) ---
+  function animateSceneC() {
+    const sceneEl = document.getElementById('scene-c');
+    if (!sceneEl) return;
+
+    stopSceneAnimation('C');
+
+    const tempDigits = sceneEl.querySelector('.thermo-digits');
+    const mercuryBar = sceneEl.querySelector('.thermo-mercury-bar');
+
+    let currentTemp = 24;
+    let tempInterval;
+
+    function tempCycle() {
+      currentTemp = 24;
+      if (tempDigits) tempDigits.textContent = '24°C';
+
+      // Rise temp to 120°C
+      let target = 120;
+      let step = 4;
+      tempInterval = setInterval(() => {
+        if (currentTemp < target) {
+          currentTemp += step;
+          if (tempDigits) tempDigits.textContent = `${currentTemp}°C`;
+        } else {
+          clearInterval(tempInterval);
+          // Wait and cool down
+          setTimeout(() => {
+            let coolInterval = setInterval(() => {
+              if (currentTemp > 24) {
+                currentTemp -= step * 1.5;
+                if (tempDigits) tempDigits.textContent = `${Math.max(24, Math.round(currentTemp))}°C`;
+              } else {
+                clearInterval(coolInterval);
+                setTimeout(tempCycle, 2000);
+              }
+            }, 50);
+          }, 3000);
+        }
+      }, 70);
+    }
+
+    tempCycle();
+    state.sceneTimers['C'] = tempInterval;
+  }
+
+  // --- SCENE 3: A (ADAPT) ---
+  function animateSceneA() {
+    const sceneEl = document.getElementById('scene-a');
+    if (!sceneEl) return;
+
+    stopSceneAnimation('A');
+
+    const students = [1, 2, 3, 4];
+    const counterText = sceneEl.querySelector('.attend-counter-text');
+    const statusText = sceneEl.querySelector('.attend-status-text');
+    const statusBg = sceneEl.querySelector('.attend-status-bg');
+
+    function resetAttendance() {
+      students.forEach((i) => {
+        const tick = sceneEl.querySelector(`.tick-${i}`);
+        const reticle = sceneEl.querySelector(`.reticle-${i}`);
+        if (tick) tick.classList.remove('scanned');
+        if (reticle) reticle.classList.remove('scanning');
+      });
+      if (counterText) counterText.textContent = '0/4';
+      if (statusText) statusText.textContent = 'SCANNING...';
+      if (statusBg) statusBg.setAttribute('fill', '#FFA502');
+    }
+
+    function scanNext(index) {
+      if (index >= students.length) {
+        if (statusText) statusText.textContent = '100% PRESENT!';
+        if (statusBg) statusBg.setAttribute('fill', '#2ED573');
+        // Restart cycle after 4s
+        state.sceneTimers['A'] = setTimeout(startClassCycle, 4000);
+        return;
+      }
+
+      const id = students[index];
+      const reticle = sceneEl.querySelector(`.reticle-${id}`);
+      const tick = sceneEl.querySelector(`.tick-${id}`);
+
+      if (reticle) reticle.classList.add('scanning');
+
+      state.sceneTimers['A'] = setTimeout(() => {
+        if (tick) tick.classList.add('scanned');
+        if (reticle) reticle.classList.remove('scanning');
+        if (counterText) counterText.textContent = `${index + 1}/4`;
+
+        state.sceneTimers['A'] = setTimeout(() => {
+          scanNext(index + 1);
+        }, 1100);
+      }, 800);
+    }
+
+    function startClassCycle() {
+      resetAttendance();
+      state.sceneTimers['A'] = setTimeout(() => scanNext(0), 800);
+    }
+
+    startClassCycle();
+  }
+
+  // --- SCENE 4: M (MODIFY) ---
+  function animateSceneM() {
+    const sceneEl = document.getElementById('scene-m');
+    if (!sceneEl) return;
+    // CSS animations handle LED pulse and student walk seamlessly
+  }
+
+  // --- SCENE 5: P (PUT TO ANOTHER USE) ---
+  function animateSceneP() {
+    const sceneEl = document.getElementById('scene-p');
+    if (!sceneEl) return;
+    // Continuous sonar ripple & red detection bounding box handled via CSS
+  }
+
+  // --- SCENE 6: E (ELIMINATE) ---
+  function animateSceneE() {
+    const sceneEl = document.getElementById('scene-e');
+    if (!sceneEl) return;
+
+    stopSceneAnimation('E');
+
+    function cableCycle() {
+      sceneEl.classList.remove('cut-done');
+
+      // Snip happens at 1.8s
+      state.sceneTimers['E'] = setTimeout(() => {
+        sceneEl.classList.add('cut-done');
+
+        // Reset and repeat after 6s
+        state.sceneTimers['E'] = setTimeout(cableCycle, 6000);
+      }, 2000);
+    }
+
+    cableCycle();
+  }
+
+  // --- SCENE 7: R (REVERSE) ---
+  function animateSceneR() {
+    const sceneEl = document.getElementById('scene-r');
+    if (!sceneEl) return;
+    // Autonomous Drone flight loop is executed smoothly via CSS @keyframes
+  }
+
+  // ------------------------------------------------------------------------
+  // REPLAY BUTTONS FOR EACH SCENE
+  // ------------------------------------------------------------------------
+  document.querySelectorAll('.scene-replay-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-target');
+      const letter = targetId.replace('scene-', '').toUpperCase();
+      stopSceneAnimation(letter);
+      startSceneAnimation(letter);
+
+      // Button feedback
+      btn.textContent = 'Replayed! ✨';
+      setTimeout(() => {
+        btn.textContent = 'Replay Action ↺';
+      }, 1200);
+    });
+  });
+
+  // ------------------------------------------------------------------------
+  // INTERACTIVE CHARACTERS MICRO-INTERACTIONS (SOUND-FREE)
+  // ------------------------------------------------------------------------
+  const reactionPhrases = {
+    'Security Guard': ['Officer Dan: All clear! 🫡', 'Alert level: 100%! 🛡️', 'No sleeping now! ☕'],
+    'AI Robot Mascot': ['CamBot: Bleep Bloop! 🤖', 'Smart scan active! ✨', 'I ♥ Campus Safety!'],
+    'Student Mia': ['Mia: Hi CamBot! 👋', 'On time for class! 🎒', 'Super safe path! 🌟'],
+    'Student Leo': ['Leo: Night vision is crisp! 👓', 'Present and accounted for! 📚', 'Crystal clear LEDs! 💡'],
+    'Student Sam': ['Sam: Drone patrol is epic! ⚽', 'Safety first! 🏃', 'High five AeroCam! ✋'],
+    'Student Zoe': ['Zoe: Attendance counted! ✔', 'Smart cameras rock! 💜', 'Lab ready! 🔬'],
+    'Drone Camera AeroCam': ['AeroCam: Whirrrr! 🚁', 'Autopilot cruising! 📡', 'Battery 100%! ⚡']
+  };
+
+  const interactiveChars = document.querySelectorAll('.interactive-char');
+
+  interactiveChars.forEach((char) => {
+    const triggerReaction = (e) => {
+      const label = char.getAttribute('aria-label') || 'Character';
+      const tooltip = char.getAttribute('data-tooltip');
+      const phrases = reactionPhrases[label] || [tooltip || 'Nice to meet you! ✨'];
+      const chosenText = phrases[Math.floor(Math.random() * phrases.length)];
+
+      // Bounce character
+      char.style.transform = 'scale(1.15) translateY(-6px)';
+      setTimeout(() => {
+        char.style.transform = '';
+      }, 300);
+
+      // Create floating bubble
+      createReactionBubble(char, chosenText, e);
+    };
+
+    char.addEventListener('click', triggerReaction);
+    char.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        triggerReaction(e);
+      }
+    });
+  });
+
+  function createReactionBubble(targetEl, text, evt) {
+    const bubble = document.createElement('div');
+    bubble.className = 'char-reaction-bubble';
+    bubble.textContent = text;
+
+    const rect = targetEl.getBoundingClientRect();
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+    bubble.style.top = `${rect.top + scrollTop - 20}px`;
+    bubble.style.left = `${rect.left + scrollLeft + rect.width / 2}px`;
+    bubble.style.transform = 'translateX(-50%)';
+
+    document.body.appendChild(bubble);
+
+    setTimeout(() => {
+      bubble.remove();
+    }, 1400);
+  }
+
+  // ------------------------------------------------------------------------
+  // ANIMATION PAUSE / RESUME TOGGLE BUTTON
+  // ------------------------------------------------------------------------
+  const motionToggle = document.getElementById('motionToggle');
+  if (motionToggle) {
+    motionToggle.addEventListener('click', () => {
+      state.animationsPaused = !state.animationsPaused;
+
+      if (state.animationsPaused) {
+        document.body.classList.add('paused-animations');
+        motionToggle.innerHTML = `
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+            <polygon points="5 3 19 12 5 21 5 3"/>
+          </svg>
+        `;
+        motionToggle.setAttribute('title', 'Resume animations');
+      } else {
+        document.body.classList.remove('paused-animations');
+        motionToggle.innerHTML = `
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+          </svg>
+        `;
+        motionToggle.setAttribute('title', 'Pause animations');
+        // Restart active scene
+        if (state.activeScene) {
+          startSceneAnimation(state.activeScene);
+        }
+      }
+    });
+  }
+
+  // ------------------------------------------------------------------------
+  // INITIALIZE FIRST SCENE CHECK
+  // ------------------------------------------------------------------------
+  updateActiveNav('S');
+  animateSceneS();
+});
+
+</script>
+  <script>
+/* Extras layer - Created by Balaji | (c) 2026 Balaji. All rights reserved. */
+(function () {
+  'use strict';
+  var RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var MOBILE = window.matchMedia('(max-width: 640px)').matches;
+  var COL = { S: '#FF4757', C: '#FF9F43', A: '#FECA57', M: '#2ED573', P: '#1E90FF', E: '#A55EEA', R: '#FF6EB4' };
+  var STORY = {
+    S: ['😴', '🤖', '🔍', '📱'], C: ['🔥', '🌡️', '🚨', '✋'], A: ['🧑‍🎓', '🙂', '✅', '📋'],
+    M: ['🌑', '💡', '🔆', '👀'], P: ['🚶', '📡', '🔴', '🔔'], E: ['🔌', '✂️', '🔗', '⚡'], R: ['📷', '🚁', '🎯', '🔋']
+  };
+  var BUDDY = { intro: '👋', S: '🚨', C: '🔥', A: '✅', M: '💡', P: '🔍', E: '🔌', R: '🚁', quiz: '🧠', outro: '🎉' };
+  var AMB = ['🎓', '📚', '🍃', '☁️', '⭐', '✨', '🏫', '🎒'];
+  function $(s, r) { return (r || document).querySelector(s); }
+  function $$(s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); }
+  function paused() { return document.body.classList.contains('paused-animations'); }
+
+  /* ---------- rainbow scroll progress ---------- */
+  var bar = document.createElement('div'); bar.className = 'rb-progress'; document.body.appendChild(bar);
+  var tick = false;
+  function updBar() {
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.transform = 'scaleX(' + (h > 0 ? Math.min(1, window.scrollY / h) : 0) + ')'; tick = false;
+  }
+  window.addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(updBar); } }, { passive: true });
+  updBar();
+
+  /* ---------- sound ---------- */
+  var ac = null, soundOn = false;
+  function tone(f, d, type, vol, when, to) {
+    if (!ac || !soundOn) return;
+    var t0 = ac.currentTime + (when || 0), o = ac.createOscillator(), g = ac.createGain();
+    o.type = type || 'sine'; o.frequency.setValueAtTime(f, t0);
+    if (to) o.frequency.exponentialRampToValueAtTime(to, t0 + d);
+    g.gain.setValueAtTime(0.0001, t0); g.gain.exponentialRampToValueAtTime(vol || 0.06, t0 + 0.02);
+    g.gain.exponentialRampToValueAtTime(0.0001, t0 + d);
+    o.connect(g); g.connect(ac.destination); o.start(t0); o.stop(t0 + d + 0.05);
+  }
+  var SFX = {
+    S: function () { tone(1320, .12, 'sine', .07); tone(1760, .22, 'sine', .07, .14); },
+    C: function () { for (var i = 0; i < 3; i++) { tone(700, .3, 'square', .035, i * .4, 1000); tone(1000, .3, 'square', .035, i * .4 + .2, 700); } },
+    A: function () { for (var i = 0; i < 5; i++) tone(1500, .05, 'square', .04, i * .12); },
+    M: function () { tone(400, .7, 'sine', .06, 0, 1500); },
+    P: function () { for (var i = 0; i < 3; i++) tone(1000, .1, 'square', .04, i * .2); },
+    E: function () { tone(1800, .25, 'sawtooth', .04, 0, 500); tone(600, .15, 'sine', .06, .3); },
+    R: function () { tone(120, .9, 'sawtooth', .03, 0, 320); },
+    ok: function () { tone(880, .1, 'sine', .07); tone(1320, .2, 'sine', .07, .1); },
+    no: function () { tone(220, .25, 'sawtooth', .05, 0, 150); },
+    pop: function () { tone(700, .12, 'sine', .06, 0, 1100); }
+  };
+  function sfx(k) { if (soundOn && SFX[k]) SFX[k](); }
+  var hc = $('.header-controls');
+  if (hc) {
+    var sb = document.createElement('button'); sb.id = 'soundToggle'; sb.className = 'btn-icon';
+    sb.setAttribute('aria-label', 'Toggle sound'); sb.title = 'Sound effects on/off'; sb.textContent = '🔇';
+    hc.insertBefore(sb, hc.firstChild);
+    sb.addEventListener('click', function () {
+      if (!ac) { try { ac = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) { return; } }
+      if (ac.state === 'suspended') ac.resume();
+      soundOn = !soundOn; sb.textContent = soundOn ? '🔊' : '🔇'; if (soundOn) sfx('ok');
+    });
+  }
+
+  /* ---------- confetti ---------- */
+  var live = 0, PAL = ['#FF4757', '#FF9F43', '#FECA57', '#2ED573', '#1E90FF', '#A55EEA', '#FF6EB4'];
+  function burst(x, y, color, n) {
+    if (RM || paused()) return;
+    n = n || 18; if (live > 70) return;
+    for (var i = 0; i < n; i++) {
+      var el = document.createElement('div'); el.className = 'cf';
+      var emo = Math.random() < 0.25;
+      if (emo) { el.textContent = ['✨', '⭐', '🎉'][i % 3]; el.style.fontSize = '16px'; }
+      else { var s = 6 + Math.random() * 6; el.style.width = s + 'px'; el.style.height = s * 1.5 + 'px'; el.style.borderRadius = '2px'; el.style.background = Math.random() < .5 && color ? color : PAL[i % 7]; }
+      document.body.appendChild(el); live++;
+      var a = Math.random() * Math.PI * 2, v = 60 + Math.random() * 120, dx = Math.cos(a) * v, dy = Math.sin(a) * v - 70, rot = (Math.random() - .5) * 720;
+      var an = el.animate([
+        { transform: 'translate(' + x + 'px,' + y + 'px) rotate(0deg)', opacity: 1 },
+        { transform: 'translate(' + (x + dx) + 'px,' + (y + dy) + 'px) rotate(' + rot / 2 + 'deg)', opacity: 1, offset: .45 },
+        { transform: 'translate(' + (x + dx * 1.2) + 'px,' + (y + dy + 170) + 'px) rotate(' + rot + 'deg)', opacity: 0 }
+      ], { duration: 900 + Math.random() * 500, easing: 'cubic-bezier(.2,.7,.4,1)', fill: 'forwards' });
+      an.onfinish = (function (e) { return function () { e.remove(); live--; }; })(el);
+    }
+  }
+  function ripple(x, y, c) {
+    if (RM || paused()) return;
+    var r = document.createElement('div'); r.className = 'tap-ripple'; r.style.left = x + 'px'; r.style.top = y + 'px'; r.style.setProperty('--c', c || '#fff');
+    document.body.appendChild(r); setTimeout(function () { r.remove(); }, 650);
+  }
+
+  /* ---------- per scene decorations ---------- */
+  var sections = $$('.scene-section');
+  sections.forEach(function (sec) {
+    var L = sec.getAttribute('data-letter'), c = COL[L];
+    // ambient
+    var amb = document.createElement('div'); amb.className = 'ambient'; amb.setAttribute('aria-hidden', 'true');
+    var n = MOBILE ? 6 : 10;
+    for (var i = 0; i < n; i++) {
+      var sp = document.createElement('span'); sp.textContent = AMB[(i + L.charCodeAt(0)) % AMB.length];
+      sp.style.setProperty('--x', (5 + (i * 91 / n) + Math.random() * 6) + '%');
+      sp.style.setProperty('--s', (16 + Math.random() * 16) + 'px');
+      sp.style.setProperty('--d', (14 + Math.random() * 12) + 's');
+      sp.style.setProperty('--delay', (-Math.random() * 20) + 's');
+      sp.style.setProperty('--dx', ((Math.random() - .5) * 120) + 'px');
+      sp.style.setProperty('--r', ((Math.random() - .5) * 200) + 'deg');
+      amb.appendChild(sp);
+    }
+    sec.insertBefore(amb, sec.firstChild);
+    var stage = $('.scene-stage', sec);
+    if (stage) {
+      var mk = document.createElement('div'); mk.className = 'stage-mark'; mk.textContent = '\u00A9 Balaji'; stage.appendChild(mk);
+      stage.addEventListener('pointerdown', function (e) { ripple(e.clientX, e.clientY, c); burst(e.clientX, e.clientY, c, 10); sfx('pop'); });
+      if (!RM && window.matchMedia('(hover:hover)').matches) {
+        stage.addEventListener('pointermove', function (e) {
+          if (e.pointerType !== 'mouse') return; var b = stage.getBoundingClientRect();
+          var px = (e.clientX - b.left) / b.width - .5, py = (e.clientY - b.top) / b.height - .5;
+          stage.style.transform = 'perspective(900px) rotateY(' + (px * 5) + 'deg) rotateX(' + (-py * 4) + 'deg)';
+        });
+        stage.addEventListener('pointerleave', function () { stage.style.transform = ''; });
+      }
+      // story ribbon
+      var rib = document.createElement('div'); rib.className = 'story-ribbon'; rib.style.setProperty('--c', c);
+      STORY[L].forEach(function (em, i) {
+        if (i) { var ar = document.createElement('span'); ar.className = 'story-arrow'; ar.textContent = '\u203A'; rib.appendChild(ar); }
+        var st = document.createElement('span'); st.className = 'story-step'; st.textContent = em; st.style.setProperty('--c', c);
+        st.addEventListener('click', function (e) { var b = st.getBoundingClientRect(); burst(b.left + b.width / 2, b.top + b.height / 2, c, 12); sfx('pop'); });
+        rib.appendChild(st);
+      });
+      stage.parentNode.insertBefore(rib, stage.nextSibling);
+      var idx = 0, timer = null, steps = $$('.story-step', rib);
+      var run = function () { steps.forEach(function (s, k) { s.classList.toggle('on', k === idx); }); idx = (idx + 1) % steps.length; };
+      sec._ribStart = function () { if (!timer) { run(); timer = setInterval(function () { if (!paused()) run(); }, 1100); } };
+      sec._ribStop = function () { clearInterval(timer); timer = null; };
+    }
+    var rb = $('.scene-replay-btn', sec); if (rb) rb.addEventListener('click', function () { sfx(L); });
+  });
+
+  /* ---------- buddy mascot ---------- */
+  var buddy = document.createElement('button'); buddy.className = 'cam-buddy'; buddy.setAttribute('aria-label', 'Camera buddy');
+  buddy.innerHTML = '<span class="buddy-bubble">👋</span><svg viewBox="0 0 64 64"><line x1="32" y1="6" x2="32" y2="14" stroke="#FFA502" stroke-width="3" stroke-linecap="round"/><circle cx="32" cy="6" r="4" fill="#FF4757"/><rect x="8" y="14" width="48" height="38" rx="14" fill="#fff"/><rect x="14" y="21" width="36" height="24" rx="10" fill="#1E293B"/><circle cx="25" cy="33" r="5" fill="#2ED573"/><circle cx="39" cy="33" r="5" fill="#2ED573"/><circle cx="26.5" cy="31.5" r="1.6" fill="#fff"/><circle cx="40.5" cy="31.5" r="1.6" fill="#fff"/><rect x="2" y="26" width="6" height="12" rx="3" fill="#1E90FF"/><rect x="56" y="26" width="6" height="12" rx="3" fill="#1E90FF"/></svg>';
+  document.body.appendChild(buddy);
+  var bub = $('.buddy-bubble', buddy);
+  function say(e) { bub.textContent = e; bub.classList.remove('pop'); void bub.offsetWidth; bub.classList.add('pop'); }
+  buddy.addEventListener('click', function () {
+    var b = buddy.getBoundingClientRect(); say(['😄', '🎉', '👍', '⚡', '🤖', '💖'][Math.floor(Math.random() * 6)]);
+    buddy.classList.remove('jump'); void buddy.offsetWidth; buddy.classList.add('jump');
+    burst(b.left + b.width / 2, b.top, null, 20); sfx('ok');
+  });
+
+  /* ---------- quiz section ---------- */
+  var QZ = [['S', 'S'], ['C', 'C'], ['A', 'A'], ['M', 'M'], ['P', 'P'], ['E', 'E'], ['R', 'R']];
+  var quiz = document.createElement('section'); quiz.className = 'quiz-section'; quiz.id = 'quiz';
+  quiz.innerHTML = '<div class="quiz-title"><span class="qb">🧠</span><span>Guess the Letter</span></div><div class="quiz-dots"></div><div class="quiz-card"></div>';
+  var outro = $('#outro'); if (outro) outro.parentNode.insertBefore(quiz, outro);
+  var qCard = $('.quiz-card', quiz), qDots = $('.quiz-dots', quiz), order, qi, score, tries;
+  function shuffle(a) { for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function startQuiz() {
+    order = shuffle(['S', 'C', 'A', 'M', 'P', 'E', 'R']); qi = 0; score = 0;
+    qDots.innerHTML = ''; order.forEach(function () { qDots.appendChild(document.createElement('i')); }); ask();
+  }
+  function ask() {
+    var L = order[qi]; tries = 0; var dots = $$('i', qDots); dots.forEach(function (d, k) { d.classList.toggle('cur', k === qi); });
+    qCard.innerHTML = '<div class="quiz-clue">' + STORY[L].map(function (e) { return '<span>' + e + '</span>'; }).join('') + '</div><div class="quiz-ask">Which SCAMPER letter?</div><div class="quiz-opts"></div>';
+    var box = $('.quiz-opts', qCard);
+    'SCAMPER'.split('').forEach(function (x) {
+      var b = document.createElement('button'); b.className = 'quiz-opt'; b.textContent = x; b.style.setProperty('--c', COL[x]); b.setAttribute('aria-label', 'Letter ' + x);
+      b.addEventListener('click', function () {
+        var r = b.getBoundingClientRect();
+        if (x === L) {
+          b.classList.add('good'); sfx('ok'); burst(r.left + r.width / 2, r.top + r.height / 2, COL[x], 22); say('🎉');
+          var dd = $$('i', qDots)[qi]; dd.className = tries === 0 ? 'ok' : 'no'; if (tries === 0) score++;
+          $$('.quiz-opt', qCard).forEach(function (o) { o.disabled = true; });
+          setTimeout(function () { qi++; if (qi < order.length) ask(); else finish(); }, 900);
+        } else { tries++; b.disabled = true; sfx('no'); say('🤔'); qCard.classList.remove('shake'); void qCard.offsetWidth; qCard.classList.add('shake'); }
+      });
+      box.appendChild(b);
+    });
+  }
+  function finish() {
+    var rank = score === 7 ? 'SCAMPER Master!' : score >= 5 ? 'Smart Spark!' : 'Good Try!';
+    qCard.innerHTML = '<div class="quiz-end"><div class="big">' + (score === 7 ? '🏆' : score >= 5 ? '🌟' : '👍') + '</div><div>Score: <b>' + score + ' / 7</b></div><div class="rank">' + rank + '</div><button class="quiz-again">Play again ↺</button></div>';
+    var r = qCard.getBoundingClientRect(); burst(r.left + r.width / 2, r.top + 40, null, 40); sfx('ok');
+    $('.quiz-again', qCard).addEventListener('click', startQuiz);
+  }
+  startQuiz();
+
+  /* ---------- observers ---------- */
+  var seen = {};
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      var s = en.target, L = s.getAttribute('data-letter');
+      if (en.isIntersecting) {
+        if (L) {
+          if (s._ribStart) s._ribStart(); say(BUDDY[L]);
+          if (!seen[L]) { seen[L] = 1; burst(window.innerWidth / 2, window.innerHeight * .3, COL[L], 26); sfx(L); }
+        } else if (s.id === 'quiz') say(BUDDY.quiz); else if (s.id === 'outro') { say(BUDDY.outro); if (!seen.o) { seen.o = 1; burst(window.innerWidth / 2, window.innerHeight * .35, null, 40); sfx('ok'); } } else if (s.id === 'intro') say(BUDDY.intro);
+      } else if (s._ribStop) s._ribStop();
+    });
+  }, { rootMargin: '-15% 0px -25% 0px', threshold: 0.3 });
+  sections.concat($$('#intro,#quiz,#outro')).forEach(function (s) { io.observe(s); });
+})();
+
+</script>
+</body>
+</html>
